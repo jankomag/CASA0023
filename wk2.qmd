@@ -1,7 +1,3 @@
 # Summary
 
-In summary, this book has no content whatsoever.
-
-```{r}
-1 + 1
-```
+Here is the link to the presentation on a chosen sensor:

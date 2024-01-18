@@ -1,4 +1,3 @@
 # Week 2
 
-Here is the link to the presentation on a chosen sensor:
-
+[Here](https://jankomag.github.io/CASA0023-wk2-pres/) is the link to the presentation on a chosen sensor:

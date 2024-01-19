@@ -1,3 +1,9 @@
 # Week 2
 
-[Here](https://jankomag.github.io/CASA0023-wk2-pres/) is the link to the presentation on a chosen sensor:
+Here is the link to the presentation on a chosen sensor:
+
+```{r echo = FALSE, out.width='40%'}
+xaringanExtra::embed_xaringan(
+  url = "https://jankomag.github.io/CASA0023-wk2-pres/",
+  ratio = "16:9")
+```

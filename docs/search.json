@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CASA0023",
     "section": "",
-    "text": "Preface\nThis is my Portfolio for CASA0023 Remotely Sensing Cities and Environments, created with Quarto."
+    "text": "Preface"
   },
   {
     "objectID": "intro.html",
@@ -18,7 +18,7 @@
     "href": "wk1.html",
     "title": "1  Week 1",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "This week we were introduced to remote sensing, focusing on how satellite imagery is collected. Firstly, there are two types of sources, passive and active - which use their own energy source to monitor Earth (e.g. SAR). The signal is recorded by capturing electromagnetic waves, which can have different frequencies, enabling sensors to find collect information about things that are not visible to human eye, because different objects have different spectral signature."
   },
   {
     "objectID": "wk2.html",
@@ -33,5 +33,19 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "index.html#casa0023-learning-diary",
+    "href": "index.html#casa0023-learning-diary",
+    "title": "CASA0023",
+    "section": "CASA0023 Learning Diary",
+    "text": "CASA0023 Learning Diary\nThis is the Portfolio for CASA0023 Remotely Sensing Cities and Environments, created with Quarto."
+  },
+  {
+    "objectID": "wk1.html#introduction-to-remote-sensing",
+    "href": "wk1.html#introduction-to-remote-sensing",
+    "title": "1  Week 1",
+    "section": "1.1 Introduction to Remote Sensing",
+    "text": "1.1 Introduction to Remote Sensing\nIn the first week we were introduced to remote sensing, focusing on how satellite imagery is collected. Firstly, there are two types of sources, passive and active, the former use the sun’s energy reflected off the ground, while the latter use their own energy source to send signal to Earth and record it (e.g. SAR). The signal is recorded by capturing electromagnetic waves, which can have different frequencies, enabling sensors to collect information about things that are not visible to human eye, due to varying spectral signatures of different objects.\nThere are certain important considerations that we need to be aware of about the signal that is being collected by the satellites. Firstly, as the signal travels, it passes through the atmosphere, which can interrupt it causing atmospheric haze of various types. Furthermore, because smaller wavelengths scatter easier, they are more difficult to pick up with sensors.\nMore to follow."
   }
 ]

@@ -1,1 +1,8 @@
 # Week 1
+## Introduction to Remote Sensing
+
+In the first week we were introduced to remote sensing, focusing on how satellite imagery is collected. Firstly, there are two types of sources, passive and active, the former use the sun's energy reflected off the ground, while the latter use their own energy source to send signal to Earth and record it (e.g. SAR). The signal is recorded by capturing electromagnetic waves, which can have different frequencies, enabling sensors to collect information about things that are not visible to human eye, due to varying spectral signatures of different objects.
+
+There are certain important considerations that we need to be aware of about the signal that is being collected by the satellites. Firstly, as the signal travels, it passes through the atmosphere, which can interrupt it causing atmospheric haze of various types. Furthermore, because smaller wavelengths scatter easier, they are more difficult to pick up with sensors.
+
+More to follow.

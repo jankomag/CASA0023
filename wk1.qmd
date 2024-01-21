@@ -5,4 +5,12 @@ In the first week we were introduced to remote sensing, focusing on how satellit
 
 There are certain important considerations that we need to be aware of about the signal that is being collected by the satellites. Firstly, as the signal travels, it passes through the atmosphere, which can interrupt it causing atmospheric haze of various types. Furthermore, because smaller wavelengths scatter easier, they are more difficult to pick up with sensors.
 
-More to follow.
+### The Four Resolutions
+There are four resolutions of images captured by satellites. Firstly, spatial - which tells us how spatially precise an image is, e.g. 10m per px. Spectral refers to the bands which have been recorded, as not all wavelengths are observable; having many bands, images are multispectral or hyperspectral. Radiometric resolution describes the sensitivity e.g. 8-bit; and finally the temporal resolution is how often the certain place on Earth is photographed.
+
+Individual bands can be merged to create indices, which show specific characteristics of the Earth's surface we want to measure. In a situation where bands are not in the same spatial resolutions, images need to be made into the same resolution, in order to be able to work with such data conjointly. There are two options for this: downscaling - going from a higher resolution like 10m to a lower like 30m; or upscaling, which is the opposite operation. The former is preferred in most cases, as the transformation makes fewer assumptions.
+
+### Working with sattelite imagery data
+Satellite data taken by Sentinel satellites can be freely accessed from the Copernicus Open Access Hub. Software tools like QGIS and SNAP (specifically for Sentinel data) can be used to browse and analyse this data, e.g. for combining different bands to produce desired indices. Examples of such indixes include false colour composite, or atmospheric penetration composite, which allow us to visualise features of the environment that are not visible to the human eye. Landsat images, which are free global images of temporal resolution 16 days, can also be acquired from the USGS website.
+
+## Practcial examples

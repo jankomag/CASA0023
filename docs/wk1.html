@@ -133,7 +133,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction-to-remote-sensing" id="toc-introduction-to-remote-sensing" class="nav-link active" data-scroll-target="#introduction-to-remote-sensing"><span class="header-section-number">1.1</span> Introduction to Remote Sensing</a></li>
+  <li><a href="#introduction-to-remote-sensing" id="toc-introduction-to-remote-sensing" class="nav-link active" data-scroll-target="#introduction-to-remote-sensing"><span class="header-section-number">1.1</span> Introduction to Remote Sensing</a>
+  <ul class="collapse">
+  <li><a href="#the-four-resolutions" id="toc-the-four-resolutions" class="nav-link" data-scroll-target="#the-four-resolutions"><span class="header-section-number">1.1.1</span> The Four Resolutions</a></li>
+  <li><a href="#working-with-sattelite-imagery-data" id="toc-working-with-sattelite-imagery-data" class="nav-link" data-scroll-target="#working-with-sattelite-imagery-data"><span class="header-section-number">1.1.2</span> Working with sattelite imagery data</a></li>
+  </ul></li>
+  <li><a href="#practcial-examples" id="toc-practcial-examples" class="nav-link" data-scroll-target="#practcial-examples"><span class="header-section-number">1.2</span> Practcial examples</a></li>
   </ul>
 </nav>
     </div>
@@ -161,7 +166,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="1.1" class="anchored" data-anchor-id="introduction-to-remote-sensing"><span class="header-section-number">1.1</span> Introduction to Remote Sensing</h2>
 <p>In the first week we were introduced to remote sensing, focusing on how satellite imagery is collected. Firstly, there are two types of sources, passive and active, the former use the sun’s energy reflected off the ground, while the latter use their own energy source to send signal to Earth and record it (e.g.&nbsp;SAR). The signal is recorded by capturing electromagnetic waves, which can have different frequencies, enabling sensors to collect information about things that are not visible to human eye, due to varying spectral signatures of different objects.</p>
 <p>There are certain important considerations that we need to be aware of about the signal that is being collected by the satellites. Firstly, as the signal travels, it passes through the atmosphere, which can interrupt it causing atmospheric haze of various types. Furthermore, because smaller wavelengths scatter easier, they are more difficult to pick up with sensors.</p>
-<p>More to follow.</p>
+<section id="the-four-resolutions" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="the-four-resolutions"><span class="header-section-number">1.1.1</span> The Four Resolutions</h3>
+<p>There are four resolutions of images captured by satellites. Firstly, spatial - which tells us how spatially precise an image is, e.g.&nbsp;10m per px. Spectral refers to the bands which have been recorded, as not all wavelengths are observable; having many bands, images are multispectral or hyperspectral. Radiometric resolution describes the sensitivity e.g.&nbsp;8-bit; and finally the temporal resolution is how often the certain place on Earth is photographed.</p>
+<p>Individual bands can be merged to create indices, which show specific characteristics of the Earth’s surface we want to measure. In a situation where bands are not in the same spatial resolutions, images need to be made into the same resolution, in order to be able to work with such data conjointly. There are two options for this: downscaling - going from a higher resolution like 10m to a lower like 30m; or upscaling, which is the opposite operation. The former is preferred in most cases, as the transformation makes fewer assumptions.</p>
+</section>
+<section id="working-with-sattelite-imagery-data" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="working-with-sattelite-imagery-data"><span class="header-section-number">1.1.2</span> Working with sattelite imagery data</h3>
+<p>Satellite data taken by Sentinel satellites can be freely accessed from the Copernicus Open Access Hub. Software tools like QGIS and SNAP (specifically for Sentinel data) can be used to browse and analyse this data, e.g.&nbsp;for combining different bands to produce desired indices. Examples of such indixes include false colour composite, or atmospheric penetration composite, which allow us to visualise features of the environment that are not visible to the human eye. Landsat images, which are free global images of temporal resolution 16 days, can also be acquired from the USGS website.</p>
+</section>
+</section>
+<section id="practcial-examples" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="practcial-examples"><span class="header-section-number">1.2</span> Practcial examples</h2>
 
 
 </section>

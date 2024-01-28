@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CASA0023",
     "section": "",
-    "text": "Preface"
+    "text": "Preface\n\nCASA0023 Learning Diary\nThis is the Portfolio for CASA0023 Remotely Sensing Cities and Environments, created with Quarto."
   },
   {
     "objectID": "intro.html",
@@ -46,13 +46,97 @@
     "href": "wk1.html#introduction-to-remote-sensing",
     "title": "1  Week 1",
     "section": "1.1 Introduction to Remote Sensing",
-    "text": "1.1 Introduction to Remote Sensing\nIn the first week we were introduced to remote sensing, focusing on how satellite imagery is collected. Firstly, there are two types of sources, passive and active, the former use the sun’s energy reflected off the ground, while the latter use their own energy source to send signal to Earth and record it (e.g. SAR). The signal is recorded by capturing electromagnetic waves, which can have different frequencies, enabling sensors to collect information about things that are not visible to human eye, due to varying spectral signatures of different objects.\nThere are certain important considerations that we need to be aware of about the signal that is being collected by the satellites. Firstly, as the signal travels, it passes through the atmosphere, which can interrupt it causing atmospheric haze of various types. Furthermore, because smaller wavelengths scatter easier, they are more difficult to pick up with sensors.\n\n1.1.1 The Four Resolutions\nThere are four resolutions of images captured by satellites. Firstly, spatial - which tells us how spatially precise an image is, e.g. 10m per px. Spectral refers to the bands which have been recorded, as not all wavelengths are observable; having many bands, images are multispectral or hyperspectral. Radiometric resolution describes the sensitivity e.g. 8-bit; and finally the temporal resolution is how often the certain place on Earth is photographed.\nIndividual bands can be merged to create indices, which show specific characteristics of the Earth’s surface we want to measure. In a situation where bands are not in the same spatial resolutions, images need to be made into the same resolution, in order to be able to work with such data conjointly. There are two options for this: downscaling - going from a higher resolution like 10m to a lower like 30m; or upscaling, which is the opposite operation. The former is preferred in most cases, as the transformation makes fewer assumptions.\n\n\n1.1.2 Working with sattelite imagery data\nSatellite data taken by Sentinel satellites can be freely accessed from the Copernicus Open Access Hub. Software tools like QGIS and SNAP (specifically for Sentinel data) can be used to browse and analyse this data, e.g. for combining different bands to produce desired indices. Examples of such indixes include false colour composite, or atmospheric penetration composite, which allow us to visualise features of the environment that are not visible to the human eye. Landsat images, which are free global images of temporal resolution 16 days, can also be acquired from the USGS website."
+    "text": "1.1 Introduction to Remote Sensing\nIn the first week of the module we were introduced to remote sensing, focusing on the principles of what satellite imagery is and how it’s collected. The first classification of sensor types, is into passive and active sources, the former use the sun’s energy reflected off the ground, while the latter use their own energy source to send signal to Earth and record it (e.g. SAR). The sensors record the signal by capturing electromagnetic waves, which can have different frequencies, enabling sensors to collect information about things that are not visible to human eye, due to varying spectral signatures of different objects. The figure below shows such a spectrum of wavelengths that signal can take, showing a rather small part that is actually visible.\n\n\n\nElectromagnetic spectrum. Image source: SkyWatch.com\n\n\nThere are certain important considerations that we need to be aware of about the signal that is being collected by the satellites. Firstly, as the signal travels, it passes through the atmosphere, which can interrupt it causing atmospheric haze of various types. Furthermore, because smaller wavelengths scatter easier, they are more difficult to pick up by the sensor.\n\n1.1.1 The Four Resolutions\nThere are four resolutions of images captured by satellites. Firstly, spatial - which tells us how spatially precise an image is, e.g. 10m per px. Spectral resolution refers to the bands which have been recorded, as not all wavelengths are observable; images with many bands are referred to as multispectral or hyperspectral. Radiometric resolution describes the sensitivity e.g. 8-bit; and finally the temporal resolution is how often the certain place on Earth is photographed.\n\n\n1.1.2 Merging bands\nIndividual bands can be merged to create indices, which show specific characteristics of the Earth’s surface we want to measure. In a situation where bands are not in the same spatial resolutions, images need to be resampled into the same resolution, in order to be able to work with such data conjointly. There are two options for this: downscaling - going from a higher resolution like 10m to a lower like 30m; or upscaling, which is the opposite operation. The former is preferred in most cases, as the transformation makes fewer assumptions. An example of an index that can be computed by merging specific bands in a certain way is the tasseled cap transformation, which is calculated from the bands representing brightness, greenness and wetness. The resulting index can be used to identify vegetation, as well as urban areas.\n\n\n1.1.3 Working with sattelite imagery data\nSatellite data taken by Sentinel satellites can be freely accessed from the Copernicus Open Access Hub. Software tools like QGIS and SNAP (specifically for Sentinel data) can be used to browse and analyse this data, e.g. for combining different bands to produce desired indices. Examples of such indices include false colour composite, or atmospheric penetration composite, which allow us to visualise features of the environment that are not visible to the human eye. Landsat images, which are free global images of temporal resolution 16 days, can also be acquired from the USGS website."
   },
   {
     "objectID": "wk1.html#practcial-examples",
     "href": "wk1.html#practcial-examples",
     "title": "1  Week 1",
     "section": "1.2 Practcial examples",
-    "text": "1.2 Practcial examples"
+    "text": "1.2 Practcial examples\nFor the practical part of this week, I downloaded Landsat image data for Dunedin, New Zealand from the USGS portal and loaded it in SNAP, as an RGB Image.  I crated small polygons for different types of surfaces like forest, barren earth, water and urban areas, and then opened this in R to examine the reflectance of these land use types for different bands.\nThese figures show this reflectance, e.g. band 5 produces the highest reflectance for all of the selected land types, except water. In band 6 the pixels of the urban area had the highest reflectance. The second plot also shows how these classes vary, and we can see that water is most consistent, while urban and bare earth seem to have the most varying values of pixels.\n\n\n\nSpectralReflectance"
+  },
+  {
+    "objectID": "wk3.html#landsat-data",
+    "href": "wk3.html#landsat-data",
+    "title": "3  Week 3",
+    "section": "3.1 Landsat Data",
+    "text": "3.1 Landsat Data\nComposed of different satellites; Landsat 1-9\nOriginal Multispectral Camera (MSS) proposed by Virginia Norwood, wiht innovative design, whisk broom, not push broom. Pivoting mirror not scanner. NASA doubted digital camera originally, wanted RBV, limited to b, g, r, near-infrred."
+  },
+  {
+    "objectID": "wk3.html#two-types-of-sensors",
+    "href": "wk3.html#two-types-of-sensors",
+    "title": "3  Week 3",
+    "section": "3.2 Two types of sensors:",
+    "text": "3.2 Two types of sensors:\n\nRBV:\nMSS:"
+  },
+  {
+    "objectID": "wk3.html#data",
+    "href": "wk3.html#data",
+    "title": "3  Week 3",
+    "section": "3.2 Data",
+    "text": "3.2 Data\nData was made publicly available in 2008"
+  },
+  {
+    "objectID": "wk3.html#corrections",
+    "href": "wk3.html#corrections",
+    "title": "3  Week 3",
+    "section": "3.1 Corrections",
+    "text": "3.1 Corrections\nThere are several issues with raw satellites imagery that require their corrections before using in analysis. Nowadays, the images are already corrected in most cases, but it’s good to understand what types of corrections need to be applied, and why. One example is a correction due to scan lines - gaps between images, which need to be smoothed.\n\n3.1.1 Geometric correction\nThis is a correction that is needed for images taken at off-nadir angle, meaning they are not looking directly down. We can imagine that the topography of the land, especially if there are mountains would significantly impact what the image shows when taken at an angle. The correction is done by mapping the points on a pre-correction image to the same points in the ground truth image. The correction can be done with OLS regression between the point values from the gold standard and the distorted image, where we’re looking to minimise the RMSE. There are two methods for this - input to output (forwrad mapping) and output to input (backward mapping). The latter is usually the default, and is done by mapping pixels from the distorted image pixel onto the gold standard image. This correction is basically like georeferencing an image, which does not have coordinates.\n\n\n3.1.2 Atmospheric correction\nThis correction is needed when the illumination source - sun going though the atmosphere is distorted resulting in haze and scattering in the images. This shows up in images as the adjacency effect, where pixel values switch their position. One method to deal with it is dark object subtraction, where the value of the darkest pixel is subtracted from the whole image. Second option is the pseudo-invariant feature.\nThere are three main types for this corrcetion: - absolute correction, where the atmposhpere is modelled with atmospheric radiative transfer models and controlled for/\n\nempirical correction type, that involves taking measurements on earth, which are used as ground truth to fit a linear regression model to minimise distortion.\n\nAlso worth mentioning is that the path radiance can be disturbed in different ways. Firstly radiance can get reflected in the atmosphere, scattering above the surface. Secondly, the light can get absorbed by the particles in the atmosphere, which results in not reahing the sensor, this is atmospheric attenuation.\nThe correction for this can be done first on several points in order to estimate the coefficients, which are then used to apply the correction apply to the rest of the image.\n\n\n3.1.3 Orthorectification / topographic correction\nThis is used to force pixels to be viewed at nadir angle. To correct for this, we can use a cosine correction, which requires information on the sensor geometry and an elevation model of the area imaged.\n\n\n3.1.4 Radiometric Calibration\nThis is not a correction but a calibration that converts the raw pixel values of an image from digital numbers to reflectance. In raw images, the pixels have image brightness or radiance recorded as a Digital Number (DN), which represents the intensity of the electromagnetic radiation per pixel. The difference between radiance and reflectance is that the former is amount of light recorded by the sensor, and the latter is the ratio of signal reflected from an object, to the amount recorded by the sensor.\nThus, radiometric Calibration is converting DN to spectral radiance, calculated using values that the sensor was calibrated for, before deployed on satellites.\nIn practice, most of the data we use, comes already analysis-ready. In Landsat algorithms like LEDPAS or L8SR apply the relevant corrections, and they are the Level 2 product."
+  },
+  {
+    "objectID": "wk3.html#enhancements-and-data-joining",
+    "href": "wk3.html#enhancements-and-data-joining",
+    "title": "3  Week 3",
+    "section": "3.2 Enhancements and data joining",
+    "text": "3.2 Enhancements and data joining\nThis section describes some manipulations that can be done on the corrected images. Firstly, we may need to join datasets as images naturally come in tiles. The edges of such tiles will usually overlap, in which case we can blend images into each other by mosaicking, or feathering.\n\n3.2.1 Filters\nApplying filters to an image is like applying a convolution kernel to an image. Different filters can be used to enhance, extract or smooth certain features of the image.\n####Texture Various operations can be done with filters, e.g. mean, variance, entropy and other operations are done by calculating probability, by dividing the values by the number of pixels in the kernel. The value of every pixel will then reflect, e.g. the variance of the kernel centered on that pixel.\nApplying the filters on the 4th band of the image of Dunedin from previous weeks, with a 7x7 window produced the measures shown here:\n Some of the measures may be difficult to interpret, as this was run on the band 4 representing infra-red - e.g. water is only distinctively shown in the mean texture, while high entropy is for example along the coastline.\nAnalysis will be updated.\nWe can also stack images on top of each other, e.g. from different dates, which is data fusion.\n\n3.2.1.1 PCA\nJust how PCA, a dimensionality reduction method can be used on tabular data, where the number of variables is reduced, so is it the same for satellite imagery. Linear combinations of multiple bands are combined in a way that maximises the variation in pixel values.\nAs part of the practical this method was applied on the Landsat data of Dunedin from previous weeks. The resulting principal components are presented in the figure below:\n\n\n\nPCA"
+  },
+  {
+    "objectID": "wk1.html#practical-examples",
+    "href": "wk1.html#practical-examples",
+    "title": "1  Week 1",
+    "section": "1.2 Practical examples",
+    "text": "1.2 Practical examples\nFor the practical part of this week, I downloaded Landsat image data for Dunedin, New Zealand from the USGS portal and loaded it in SNAP, as an RGB Image.  I crated small polygons for different types of surfaces like forest, barren earth, water and urban areas, and then opened this in R to examine the reflectance of these land use types for different bands.\nThese figures show this reflectance, e.g. band 5 has the highest reflectance for all of the selected land types, except water. In band 6 the pixels of the urban area had the highest reflectance. The second plot also shows how these classes vary, and we can see that water is most consistent, while urban and bare earth seem to have the most varying values of pixels. These values, of course depend on the polygons that were selected.\n\n\n\nSpectralReflectance"
+  },
+  {
+    "objectID": "wk1.html#applications",
+    "href": "wk1.html#applications",
+    "title": "1  Week 1",
+    "section": "1.3 Applications",
+    "text": "1.3 Applications\nThere are of course countless examples of research that uses remote sensing data. While browsing the literature I came across a project focused on using such data from different sources including Landsat to model the historic Aboriginal foraging habitats in the Australian Western Desert. This was quantified by assessing water accessibility, vegetation greenness, as well as the land topography, and the identified locations where precontact Aboriginal people likely may have lived, showed different patterns than what was previously thought ."
+  },
+  {
+    "objectID": "wk1.html#reflections",
+    "href": "wk1.html#reflections",
+    "title": "1  Week 1",
+    "section": "1.4 Reflections",
+    "text": "1.4 Reflections\nWhen thinking about the vastness of available satellite imagery data, it’s easy to get overwhelmed. Before beginning to use such data for research questions, I definitely feel that it’s good to know how these sensors collect the data, why there are different bands, what they represent etc. As working with such data locally is naturally, rather difficult due to their size and computational expense needed to process them, I am curious to learn more about the cloud tools like GEE."
+  },
+  {
+    "objectID": "wk3.html#applications",
+    "href": "wk3.html#applications",
+    "title": "3  Week 3",
+    "section": "3.3 Applications",
+    "text": "3.3 Applications\nThe study by identified slums in Hyderabad, using texture-based methods on satellite imagery. The detection relies on a line detection based on lacunarity calculation, which is a measure that uses a variance filter. The performance of this method is compared to a PCA calculation from multiple bands, and the line detection method is found to be a significantly better predictor of slums in this city."
+  },
+  {
+    "objectID": "wk3.html#glossary-of-terms",
+    "href": "wk3.html#glossary-of-terms",
+    "title": "3  Week 3",
+    "section": "3.4 Glossary of terms",
+    "text": "3.4 Glossary of terms\nUsing collection 2, surface reflactance level 2, tier 1."
+  },
+  {
+    "objectID": "wk3.html#sensor-types",
+    "href": "wk3.html#sensor-types",
+    "title": "3  Week 3",
+    "section": "3.1 Sensor types",
+    "text": "3.1 Sensor types\nFirstly, a bit about the history of sensors - the first digital sensor put on a Landsat satellite was the Multispectral Scanner Camera (MSS) built by Virginia Norwood. Its innovative design that used a whisk broom, rather than a push broom, was initially reluctantly implemented by NASA, as previous RBV sensors, were limited to only a few bands. The data captured by the satellites was made publicly available in 2008.\n—Pivoting mirror not scanner."
+  },
+  {
+    "objectID": "wk3.html#reflections",
+    "href": "wk3.html#reflections",
+    "title": "3  Week 3",
+    "section": "3.4 Reflections",
+    "text": "3.4 Reflections\nThe technically-heavy material of this week has given me a good grounding in understanding some of the aspects of satellite data that we don’t directly deal with, as data comes analysis-ready. I find particularly interesting the kernel-based operations that can be applied to satellite data and what features they might show."
   }
 ]

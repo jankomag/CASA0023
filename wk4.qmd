@@ -14,4 +14,4 @@ Using satellite imagery we could identify the most valuable areas which should b
 So far I have not found any policies that make us of such data.
 The data that could be used for this application, would need to be of rather high spatial resolution, as this is an issue relevant to a particular city. This is because, what we'd be looking to achieve with such data requires the analysis of low-level features in the urban environment. 
 
-More discussion will be added
+More discussion will be added.

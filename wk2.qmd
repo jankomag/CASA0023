@@ -1,6 +1,6 @@
-# Week 2
+# Week 2 - Xaringan Presentation
 
-Here is the link to the presentation on a chosen sensor:
+Here is the presentation on Landsat 9:
 
 ```{r echo = FALSE, out.width='40%'}
 xaringanExtra::embed_xaringan(

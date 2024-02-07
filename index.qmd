@@ -1,3 +1,6 @@
 # Preface {.unnumbered}
 ### CASA0023 Learning Diary
 This is the Portfolio for CASA0023 Remotely Sensing Cities and Environments, created with Quarto.
+
+## About me
+To be added

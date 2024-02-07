@@ -1,0 +1,17 @@
+# Week 4 - Policy applications
+## Summary
+
+I recently read an article, which made me think about a problem that the city of Melbourne is facing, and that could potentially benefit from analysis of remote sensing data [@guardian2024]. The issue described in the article is about the land on the city's fringe being converted from very prolific and important farmland into low-rise suburban developments. The land surrounding the city is actually some of the richest and most productive soils in the state of Victoria, which is important for both food security and the economy of the region. Such developments have also been found to increase fire risk, which is a very important issue in Australia [@stanley2020].
+
+The issue is that there is a lack of planning and policies in Melbourne that protect the valuable farmlands being used for developments. However, it's important to realise that banning new developments in Melbourne is not a good idea, due to the city's very unaffordable housing market. Curbing the supply of new housing  would put even more pressure on the already strained and undersupplied property market. That is why it is important the city allows for more urban intensification, which is a growing topic in the city that more policies are starting to build towards. Therefore, there is the issue from two sides - one protecting the existing farmlands, and secondly building more affordable housing in the city.
+
+## Applications
+Therefore, in order to address this issue from both sides, policies would need to be developed that for one identify the most important areas of farmlands that would need to be protected and secondly identify inner-city areas where densification is most suitable, such as around the now under-construction Melbourne Suburban Rail Loop, at whose new stations, densification is due to be prioritised. This is where remote sensing data could help.
+
+Using satellite imagery we could identify the most valuable areas which should be protected. The identification of soil quality and the valuation of natural environments are applications where remote sensing has been used [@hazeu2014high]. Furthermore for finding areas of densification, remote sensing might not be an obvious choice, but could help in assessing the greenness of such areas or e.g. their soil permeability - all aspects that are important in order for the city to build dense urban spaces that are good for the environment.
+
+## Reflections
+So far I have not found any policies that make us of such data.
+The data that could be used for this application, would need to be of rather high spatial resolution, as this is an issue relevant to a particular city. This is because, what we'd be looking to achieve with such data requires the analysis of low-level features in the urban environment. 
+
+More discussion will be added

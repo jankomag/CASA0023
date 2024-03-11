@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 - 4&nbsp; Week 4 - Policy applications</title>
+<title>CASA0023 - 6&nbsp; Week 7 - Classification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,8 +49,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./wk6.html" rel="next">
-<link href="./wk3.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./wk6.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,6 +81,8 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -93,7 +95,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy applications</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk7.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -144,7 +146,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk4.html" class="sidebar-item-text sidebar-link active">
+  <a href="./wk4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy applications</span></span></a>
   </div>
 </li>
@@ -156,7 +158,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk7.html" class="sidebar-item-text sidebar-link">
+  <a href="./wk7.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification</span></span></a>
   </div>
 </li>
@@ -176,10 +178,12 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">4.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">4.2</span> Applications</a></li>
-  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">4.3</span> Reflections</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.4</span> References</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#random-forest" id="toc-random-forest" class="nav-link" data-scroll-target="#random-forest"><span class="header-section-number">6.1.1</span> Random forest</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> Applications</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">6.3</span> Reflections</a></li>
   </ul>
 </nav>
     </div>
@@ -188,7 +192,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy applications</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification</span></h1>
 </div>
 
 
@@ -203,37 +207,54 @@ div.csl-indent {
 
 </header>
 
-<section id="summary" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
-<p>I recently read an article about an issue that the city of Melbourne is facing, which could potentially benefit from analysis of remote sensing data <span class="citation" data-cites="guardian2024">(<a href="references.html#ref-guardian2024" role="doc-biblioref">Wilson 2024</a>)</span>. The issue described in the article is about the land on the city’s fringe being converted from important farmland into low-rise suburban developments. The land surrounding the city has some of the richest and most productive soils in the state of Victoria, which is important for both food security and the local economy. The developments encroaching onto this land are also associated with increased fire risk, which is a very important issue in this region of Australia <span class="citation" data-cites="stanley2020">(<a href="references.html#ref-stanley2020" role="doc-biblioref">Stanley and March 2020</a>)</span>.</p>
-<p>There is a lack of policies in Melbourne that would address this issue and constrain where developments are allowed to happen, given the potential of the land for agriculture. Of course, completely halting new developments in Melbourne is a really bad idea, due to the city’s very unaffordable housing market and projected population growth. Curbing the supply of new housing would put even more pressure on the already strained property market. That is why it is important the city allows for more urban intensification, and designates areas where the city should be growing, not just through sprawl but also urban desnification which is an increasingly discussed topic in the city, which is being addressed with new policies. Therefore, the need for more housing in Melbourne is a twofold problem - firstly keeping the existing farmlands, and secondly building more affordable housing in the city.</p>
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<p>This week I learned more about applying machine learning methods to raster data. We looked specifically at two types of analysis - classification and regression, depending on the problem we need to solve. Such models utilise an expert system, which is a mechanism that draws conclusions from a knowledge base it was exposed to during training. Machine learning on raster images can be broadly divided into object-based and pixel-based analysis.</p>
+<p><strong>Decision Trees</strong></p>
+<p><strong><em>Classification</em></strong></p>
+<p>This method is an algorithm for splitting up the dataset into classes based on values of predictors. Decision trees are built up of decision nodes at which the split of the datapoints occurs, and leaves which match the data that falls into that leaf to a particular class. Basically it’s classifying the data based on many if else statements. However, the mechanism for constructing such trees can be more complex.</p>
+<p>In order to decide how best to split the data, several measures can be used, such that the decision nodes split the data in the most effective way, including entropy, information gain, or the most commonly used - Gini impurity, which is calculated for every decision node, and takes the form of the equation below:</p>
+<p><span class="math display">\[
+giniImpurity(D) = 1 - \sum_{i=1}^{k}{p_i^2}
+\]</span></p>
+<p>where <span class="math inline">\(p\)</span> is the probability of datapoints belonging to class <span class="math inline">\(i\)</span> at node <span class="math inline">\(D\)</span>, and <span class="math inline">\(k\)</span> is the number of classes. When building the classification tree, the nodes with lowest Gini impurity are selected. The trees are evaluated iteratively, fitting lines to all groups and keeping splits with lowest sum of squared residuals (SSR).</p>
+<p>The problem of overfitting decision trees - when they learn too granular aspects of the data and cannot generalise to the unseen data can be combated in several ways. The most common method is pruning based on the weakest link. This means removing decision nodes, which are the least important in classifying training data into the correct classes. This is based on the tree score, which can be calculated using the function below:</p>
+<p><span class="math display">\[
+treeScore(Tree) = SSR + \alpha T
+\]</span> where is the tree penalty parameter and <span class="math inline">\(T\)</span> is the number of leaves. The process works by iteratively increment alpha until the tree score starts to decrease. Cross validation can be used to find the best alpha.</p>
+<p><strong>Regression Trees</strong></p>
+<p>The same methodology of decision trees extends to regression problems, in which we need to predict a number rather than a class. The tree is built by splitting the dataset into groups along one of the axes, and a decision node is added at the point where the SSR resulting from that division is lowest. The first decision node is chose for the predictor whose split results in the lowest SSR, and the process is repeated iteratively until the number of splits reaches the limit imposed by the settings chosen, such as minimum number of data points for a leaf.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="res/regtree.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Illustration of Reegression Tree applied to a dataset. <a href="https://www.datacamp.com/tutorial/decision-trees-R">Source: datacamp.com</a></figcaption>
+</figure>
+</div>
+<section id="random-forest" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="random-forest"><span class="header-section-number">6.1.1</span> Random forest</h3>
+<p>This method generalises decision trees by building many random decision trees, which we have little control of how individual trees are built. However, the methodology builds many simple trees, which overall vote over what the prediction for a new datapoint should be. The training of random forests benefits from bootstrapping, which is a method that randomly subsets the training data, such that every tree is trained on different subset, which means different values will be fed to different trees. An out-of-bag hold out set of the data can be used to evaluate the trained model.</p>
+<p><strong>Support Vector Machines</strong> SVMs are a method that finds a hyperplane in the multidimensional feature space, which best divides that data into classes. The method can benefit from applying kernel functions, which project the data points onto hyperplanes, which are easier to classify. The hyperparameters, which control the model can be tuned, e.g.&nbsp;using grid search, which tests many predefined values of parameters (very expensive), or using an optimisation algorithm, such as simulated annealing, swarm optimisation, or genetic algorithms.</p>
+<p><strong>Unsupervised methods</strong> Additionally, unsupervised methods can also be used for identifying unspecified classes. Algorithms such as DBSCAN or k-means clustering, will assign data points to optimal classes, based on the data. When a cluster is identified that comprises two known classes, cluster busting can be done, which is reapplying a clustering algorithm to that one cluster.</p>
+<p>Applying these methods to satellite imagery can be done for every pixel, where e.g.&nbsp;a land cover class is assigned to every pixel (classification) or an index value (regression), and features are channels.</p>
 </section>
-<section id="applications" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">4.2</span> Applications</h2>
-<p>In order to address this issue from both sides, policies would need to be developed that for one identify the most important areas of farmlands that would need to be protected and secondly identify inner-city areas where densification is most suitable. For example around the now under-construction Melbourne Suburban Rail Loop stations where densification is being prioritised. This is where remote sensing data could help.</p>
-<p>Using satellite imagery we could identify the most valuable areas which should be protected. The identification of soil quality and the valuation of natural environments are applications where remote sensing can be used <span class="citation" data-cites="hazeu2014high">(<a href="references.html#ref-hazeu2014high" role="doc-biblioref">Hazeu et al. 2014</a>)</span>. Furthermore for finding areas of densification, remote sensing might not be an obvious choice, but could help in assessing the greenness of such areas or e.g.&nbsp;their soil permeability - all aspects that are important in order for the city to build dense urban spaces that are good for the environment.</p>
 </section>
-<section id="reflections" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">4.3</span> Reflections</h2>
-<p>The approach outlined above of using remotely sensed data for this issue, may not be the best choice for all aspects of the problem. Firstly, it would require using very high-resolution imagery. Secondly, for analysis of areas of the city where densification potential is highest, a natural choice would be to rely on vector data of spatial units, using sociodemographic data or transport and infrastructure data.</p>
-<p>The Melbourne Plan 2017-2050 mentions in its implementation the importance of using spatial data for planning new developments and open spaces <span class="citation" data-cites="planmelbourne">(<a href="references.html#ref-planmelbourne" role="doc-biblioref">Victoria State Government 2017</a>)</span>. The plan even mentions in one section how the city will “protect the right to farm in key locations within green wedges and peri-urban areas”. However, the methodology or any directions of how this will be achieved is lacking.</p>
+<section id="applications" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
+<p>There are heaps of examples of research papers applying machine learning methods to urban research. The first one I wanted to focus on here is a paper that takes a two-pronged fuzzy approach to classification, in that land cover classes are assigned probabilities to pixels, rather than definitive classes <span class="citation" data-cites="shackelford2003combined">(<a href="references.html#ref-shackelford2003combined" role="doc-biblioref">Shackelford and Davis 2003</a>)</span>. Similar classes such as Roads and Buildings would in such a case be most difficult to classify, especially since pixel-based analysis doesn’t consider spatial dependence. After performing pixel-based classification, the authors develop a second method, that performs object-based segmentation of the image based on similarity of classes in nearby pixels, which makes the output more consistent, resulting in an overall more flexible methodology.</p>
+<p>Another paper by <span class="citation" data-cites="goldblatt2016detecting">(<a href="references.html#ref-goldblatt2016detecting" role="doc-biblioref">Goldblatt et al. 2016</a>)</span> is aimed at identifying boundaries of urban areas using a pixel based analysis of remotely sensed data, using SVM and Random Forest models. Because the authors develop the model in GEE, the research can be easily replicated for other countries, which poses a great opportunity for replicating the methodology.</p>
 </section>
-<section id="references" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="references"><span class="header-section-number">4.4</span> References</h2>
+<section id="reflections" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.3</span> Reflections</h2>
+<p>This week was actually quite unique as it offered a perspective on working with image data I had not considered before. Prior to this lecture, I had only learned about object-based analysis of images with convolutional operations, and specifically using neural networks to extract and encode information from images in order to classify or identify features from images. This lecture opened my eyes to much simpler way of working with satellite imagery that uses only pixel values of various bands (features) to predict such outcomes.</p>
+<p>This enables the use of classical machine learning algorithms like e.g.&nbsp;Random Forests in the context of raster data, by treating is just like tabular data. This gets rid of the spatial dependence of pixels that are next to each other, which of course is absolutely crucial, but such methods are significantly computationally cheaper than convolutional neural networks.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-hazeu2014high" class="csl-entry" role="listitem">
-Hazeu, Gerard, Pavel Milenov, Bas Pedroli, Vessela Samoungi, Michiel Van Eupen, and Vassil Vassilev. 2014. <span>“High Nature Value Farmland Identification from Satellite Imagery, a Comparison of Two Methodological Approaches.”</span> <em>International Journal of Applied Earth Observation and Geoinformation</em> 30: 98–112.
+<div id="ref-goldblatt2016detecting" class="csl-entry" role="listitem">
+Goldblatt, Ran, Wei You, Gordon Hanson, and Amit K Khandelwal. 2016. <span>“Detecting the Boundaries of Urban Areas in India: A Dataset for Pixel-Based Image Classification in Google Earth Engine.”</span> <em>Remote Sensing</em> 8 (8): 634.
 </div>
-<div id="ref-stanley2020" class="csl-entry" role="listitem">
-Stanley, Janet, and Alan March. 2020. <span>“Black Saturday: Urban Sprawl and Climate Change Remain Key Dangers.”</span> <em>Pursuit</em>. <a href="https://pursuit.unimelb.edu.au/articles/black-saturday-urban-sprawl-and-climate-change-remain-key-dangers">https://pursuit.unimelb.edu.au/articles/black-saturday-urban-sprawl-and-climate-change-remain-key-dangers</a>.
-</div>
-<div id="ref-planmelbourne" class="csl-entry" role="listitem">
-Victoria State Government. 2017. <span>“<span>Plan Melbourne 2017–2050</span>.”</span> 2017. <a href="https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/plan-melbourne">https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/plan-melbourne</a>.
-</div>
-<div id="ref-guardian2024" class="csl-entry" role="listitem">
-Wilson, Katherine. 2024. <span>“Guardian News &amp; Media Produces a Variety of Content with Funding from Outside Parties.”</span> <em>The Guardian</em>, May. <a href="https://www.theguardian.com/info/2017/may/22/guardian-news-media-funding-and-investment">https://www.theguardian.com/info/2017/may/22/guardian-news-media-funding-and-investment</a>.
+<div id="ref-shackelford2003combined" class="csl-entry" role="listitem">
+Shackelford, Aaron K, and Curt H Davis. 2003. <span>“A Combined Fuzzy Pixel-Based and Object-Based Approach for Classification of High-Resolution Multispectral Data over Urban Areas.”</span> <em>IEEE Transactions on GeoScience and Remote Sensing</em> 41 (10): 2354–63.
 </div>
 </div>
 </section>
@@ -474,13 +495,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./wk3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections and Data Enhancements</span></span>
+      <a href="./wk6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - Google Earth Engine</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./wk6.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - Google Earth Engine</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

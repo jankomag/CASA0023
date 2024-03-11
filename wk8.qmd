@@ -1,0 +1,10 @@
+# Week 8 - Assessment of classification models
+
+## Summary
+This week the material continued on classification, focusing on aspects like object-based analysis and how we can assess classification results. Firstly, let's look at object-based analysis, as opposed to pixel-based. 
+
+# Applications
+TODO
+
+## Reflections
+TODO

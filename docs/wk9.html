@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 - References</title>
+<title>CASA0023 - 8&nbsp; Week 9 - Synthetic Aperture Radar</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./wk9.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./wk8.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk9.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 9 - Synthetic Aperture Radar</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -148,13 +149,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wk9.html" class="sidebar-item-text sidebar-link">
+  <a href="./wk9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 9 - Synthetic Aperture Radar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -164,14 +165,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">9</span> Applications</a>
+  <ul class="collapse">
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">9.1</span> Reflections</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 9 - Synthetic Aperture Radar</span></h1>
 </div>
 
 
@@ -186,100 +197,32 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>::: {#refs}</p>
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<p>Synthetic Aperture Radar (SAR) is an active type of sensor that sends a signal at a specific frequency to Earth’s surface and records the signal in that same frequency coming back. The choice of the frequency of course will determine what the sensor is able to identify. For example sea band radio waves (4-8 GHz) can be used for detecting ice or ocean maritime activity. This is why depending on the wavelength we are able to penetrate e.g.&nbsp;through the tree canopy, as well as clouds. Another advantage is that this can collect data at night, as sun’s energy is not utilised.</p>
+<p>Aperture of the radar is of significance, as that determines the resolution of the collected data. This is controlled by the size of the antenna, and the longer the antenna the higher resolution we could collect. For that reason, this sensor utilises the movement of the satellite in orbit to “expand” the antenna, because it is continuously sending signal to Earth imaging the specific location from different points in orbit. Hence the name - <strong>synthetic</strong> aperture radar. The image below illustrates how this works.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="res/SAR_imaging_modes.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Illustration of SAR. <a href="https://www.dlr.de/en/service/imprint">Source: DLR (CC BY-NC-ND 3.0)</a></figcaption>
+</figure>
+</div>
+<p>Another notable aspect of SAR imagery is the polarisation of the signal. Different sensors will have different polarisation (either vertical or horizontal), which affects what materials are recorded. For example buildings and trees are most sensitive to sensor sending and receiving horizontal polarisations, while bare earth to vertical-vertical (VV). Therefore, for example it is of significance to capturing water’s surface, whether the imagery is collected on a windy or calm day, as rough water surface will reflect signal differently.</p>
+<p>Backscatter or amplitude of the signal, as well as its phase are also of significance. Phase is when in the wave cycle the signal reaches the sensor (whether its at a peak or trough of the wave). This is the technique, which enables change detection with very high accuracy. This is calle Interferometric SAR (InSAR), which can be used for creating Digital Elevation Models (DEMs). Furthermore, Differential InSAR (DInSAR) can also be used for detecting change after earthquakes, landslides or other events that had an impact on the earth’s surface, but also buildings after for example bombings.</p>
+<p>SAR imagery when catpured, of course also comes with lots of metadata, which is crucial to understand and analyse the imagery, for example it will matter whether the data was recorded on the south-to-north or north-to-south orbit pass. Moreover, SAR data will often be on a power scale, which necessitates the use of appropriate transformation methods. In practice, perhaps the most influential usecase of SAR data is for change detection, which is based on a ratio of the image after a change event to the image prior. There have been many ways developed for quantifying change, depending on the intended use case, such as inverted ratio which works in ways that gives changed pixels more importance.</p>
+</section>
+<section id="applications" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Applications</h1>
+<p>TODO</p>
+<section id="reflections" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="reflections"><span class="header-section-number">9.1</span> Reflections</h2>
+<p>TODO</p>
 
 
+</section>
+</section>
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-goldblatt2016detecting" class="csl-entry" role="listitem">
-Goldblatt, Ran, Wei You, Gordon Hanson, and Amit K Khandelwal. 2016.
-<span>“Detecting the Boundaries of Urban Areas in India: A Dataset for
-Pixel-Based Image Classification in Google Earth Engine.”</span>
-<em>Remote Sensing</em> 8 (8): 634.
-</div>
-<div id="ref-hazeu2014high" class="csl-entry" role="listitem">
-Hazeu, Gerard, Pavel Milenov, Bas Pedroli, Vessela Samoungi, Michiel Van
-Eupen, and Vassil Vassilev. 2014. <span>“High Nature Value Farmland
-Identification from Satellite Imagery, a Comparison of Two
-Methodological Approaches.”</span> <em>International Journal of Applied
-Earth Observation and Geoinformation</em> 30: 98–112.
-</div>
-<div id="ref-kit2012texture" class="csl-entry" role="listitem">
-Kit, Oleksandr, Matthias Lüdeke, and Diana Reckien. 2012.
-<span>“Texture-Based Identification of Urban Slums in Hyderabad, India
-Using Remote Sensing Data.”</span> <em>Applied Geography</em> 32 (2):
-660–67.
-</div>
-<div id="ref-law2021using" class="csl-entry" role="listitem">
-Law, W Boone, Peter Hiscock, Bertram Ostendorf, and Megan Lewis. 2021.
-<span>“Using Satellite Imagery to Evaluate Precontact Aboriginal
-Foraging Habitats in the Australian Western Desert.”</span>
-<em>Scientific Reports</em> 11 (1): 10755.
-</div>
-<div id="ref-li2015comparison" class="csl-entry" role="listitem">
-Li, Wei, Jean-Daniel M Saphores, and Thomas W Gillespie. 2015. <span>“A
-Comparison of the Economic Benefits of Urban Green Spaces Estimated with
-NDVI and with High-Resolution Land Cover Data.”</span> <em>Landscape and
-Urban Planning</em> 133: 105–17.
-</div>
-<div id="ref-liu2018high" class="csl-entry" role="listitem">
-Liu, Xiaoping, Guohua Hu, Yimin Chen, Xia Li, Xiaocong Xu, Shaoying Li,
-Fengsong Pei, and Shaojian Wang. 2018. <span>“High-Resolution
-Multi-Temporal Mapping of Global Urban Land Using Landsat Images Based
-on the Google Earth Engine Platform.”</span> <em>Remote Sensing of
-Environment</em> 209: 227–39.
-</div>
-<div id="ref-nazeer2014evaluation" class="csl-entry" role="listitem">
-Nazeer, Majid, Janet E Nichol, and Ying-Kit Yung. 2014.
-<span>“Evaluation of Atmospheric Correction Models and Landsat Surface
-Reflectance Product in an Urban Coastal Environment.”</span>
-<em>International Journal of Remote Sensing</em> 35 (16): 6271–91.
-</div>
-<div id="ref-seydi2021wildfire" class="csl-entry" role="listitem">
-Seydi, Seyd Teymoor, Mehdi Akhoondzadeh, Meisam Amani, and Sahel
-Mahdavi. 2021. <span>“Wildfire Damage Assessment over Australia Using
-Sentinel-2 Imagery and MODIS Land Cover Product Within the Google Earth
-Engine Cloud Platform.”</span> <em>Remote Sensing</em> 13 (2): 220.
-</div>
-<div id="ref-shackelford2003combined" class="csl-entry" role="listitem">
-Shackelford, Aaron K, and Curt H Davis. 2003. <span>“A Combined Fuzzy
-Pixel-Based and Object-Based Approach for Classification of
-High-Resolution Multispectral Data over Urban Areas.”</span> <em>IEEE
-Transactions on GeoScience and Remote Sensing</em> 41 (10): 2354–63.
-</div>
-<div id="ref-stanley2020" class="csl-entry" role="listitem">
-Stanley, Janet, and Alan March. 2020. <span>“Black Saturday: Urban
-Sprawl and Climate Change Remain Key Dangers.”</span> <em>Pursuit</em>.
-<a href="https://pursuit.unimelb.edu.au/articles/black-saturday-urban-sprawl-and-climate-change-remain-key-dangers">https://pursuit.unimelb.edu.au/articles/black-saturday-urban-sprawl-and-climate-change-remain-key-dangers</a>.
-</div>
-<div id="ref-taherzadeh2011using" class="csl-entry" role="listitem">
-Taherzadeh, Ebrahim, and Helmi ZM Shafri. 2011. <span>“Using
-Hyperspectral Remote Sensing Data in Urban Mapping over Kuala
-Lumpur.”</span> In <em>2011 Joint Urban Remote Sensing Event</em>,
-405–8. IEEE.
-</div>
-<div id="ref-tuia2009multisource" class="csl-entry" role="listitem">
-Tuia, Devis, Frédéric Ratle, Alexei Pozdnoukhov, and Gustavo
-Camps-Valls. 2009. <span>“Multisource Composite Kernels for Urban-Image
-Classification.”</span> <em>IEEE Geoscience and Remote Sensing
-Letters</em> 7 (1): 88–92.
-</div>
-<div id="ref-velastegui2023google" class="csl-entry" role="listitem">
-Velastegui-Montoya, Andrés, Néstor Montalván-Burbano, Paúl Carrión-Mero,
-Hugo Rivera-Torres, Luı́s Sadeck, and Marcos Adami. 2023. <span>“Google
-Earth Engine: A Global Analysis and Future Trends.”</span> <em>Remote
-Sensing</em> 15 (14): 3675.
-</div>
-<div id="ref-planmelbourne" class="csl-entry" role="listitem">
-Victoria State Government. 2017. <span>“<span>Plan Melbourne
-2017–2050</span>.”</span> 2017. <a href="https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/plan-melbourne">https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/plan-melbourne</a>.
-</div>
-<div id="ref-guardian2024" class="csl-entry" role="listitem">
-Wilson, Katherine. 2024. <span>“Guardian News &amp; Media Produces a
-Variety of Content with Funding from Outside Parties.”</span> <em>The
-Guardian</em>, May. <a href="https://www.theguardian.com/info/2017/may/22/guardian-news-media-funding-and-investment">https://www.theguardian.com/info/2017/may/22/guardian-news-media-funding-and-investment</a>.
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -515,11 +458,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./wk9.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 9 - Synthetic Aperture Radar</span></span>
+      <a href="./wk8.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8 - Assessment of classification models</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -22,8 +22,7 @@ The problem of overfitting decision trees - when they learn too granular aspects
 
 $$
 treeScore(Tree) = SSR + \alpha T
-$$
-where \alpha is the tree penalty parameter and $T$ is the number of leaves. The process works by iteratively increment alpha until the tree score starts to decrease. Cross validation can be used to find the best alpha.
+$$ where \alpha is the tree penalty parameter and $T$ is the number of leaves. The process works by iteratively increment alpha until the tree score starts to decrease. Cross validation can be used to find the best alpha.
 
 **Regression Trees**
 
@@ -33,17 +32,16 @@ The same methodology of decision trees extends to regression problems, in which 
 
 ### Random forest
 
-This method generalises decision trees by building many random decision trees, which we have little control of how individual trees are built. However, the methodology builds many simple trees, which overall vote over what the prediction for a new datapoint should be.  The training of random forests benefits from bootstrapping, which is a method that randomly subsets the training data, such that every tree is trained on different subset, which means different values will be fed to different trees. An out-of-bag hold out set of the data can be used to evaluate the trained model.
+This method generalises decision trees by building many random decision trees, which we have little control of how individual trees are built. However, the methodology builds many simple trees, which overall vote over what the prediction for a new datapoint should be. The training of random forests benefits from bootstrapping, which is a method that randomly subsets the training data, such that every tree is trained on different subset, which means different values will be fed to different trees. An out-of-bag hold out set of the data can be used to evaluate the trained model.
 
-**Support Vector Machines**
-SVMs are a method that finds a hyperplane in the multidimensional feature space, which best divides that data into classes. The method can benefit from applying kernel functions, which project the data points onto hyperplanes, which are easier to classify. The hyperparameters, which control the model can be tuned, e.g. using grid search, which tests many predefined values of parameters (very expensive), or using an optimisation algorithm, such as simulated annealing, swarm optimisation, or genetic algorithms.
+**Support Vector Machines** SVMs are a method that finds a hyperplane in the multidimensional feature space, which best divides that data into classes. The method can benefit from applying kernel functions, which project the data points onto hyperplanes, which are easier to classify. The hyperparameters, which control the model can be tuned, e.g. using grid search, which tests many predefined values of parameters (very expensive), or using an optimisation algorithm, such as simulated annealing, swarm optimisation, or genetic algorithms.
 
-**Unsupervised methods**
-Additionally, unsupervised methods can also be used for identifying unspecified classes. Algorithms such as DBSCAN or k-means clustering, will assign data points to optimal classes, based on the data. When a cluster is identified that comprises two known classes, cluster busting can be done, which is reapplying a clustering algorithm to that one cluster.
+**Unsupervised methods** Additionally, unsupervised methods can also be used for identifying unspecified classes. Algorithms such as DBSCAN or k-means clustering, will assign data points to optimal classes, based on the data. When a cluster is identified that comprises two known classes, cluster busting can be done, which is reapplying a clustering algorithm to that one cluster.
 
 Applying these methods to satellite imagery can be done for every pixel, where e.g. a land cover class is assigned to every pixel (classification) or an index value (regression), and features are channels.
 
 ## Applications
+
 There are heaps of examples of research papers applying machine learning methods to urban research. The first one I wanted to focus on here is a paper that takes a two-pronged fuzzy approach to classification, in that land cover classes are assigned probabilities to pixels, rather than definitive classes [@shackelford2003combined]. Similar classes such as Roads and Buildings would in such a case be most difficult to classify, especially since pixel-based analysis doesn't consider spatial dependence. After performing pixel-based classification, the authors develop a second method, that performs object-based segmentation of the image based on similarity of classes in nearby pixels, which makes the output more consistent, resulting in an overall more flexible methodology.
 
 Another paper by [@goldblatt2016detecting] is aimed at identifying boundaries of urban areas using a pixel based analysis of remotely sensed data, using SVM and Random Forest models. Because the authors develop the model in GEE, the research can be easily replicated for other countries, which poses a great opportunity for replicating the methodology.

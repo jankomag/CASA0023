@@ -32,7 +32,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "::: {#refs}\n\n\n\n\n\nLaw, W Boone, Peter Hiscock, Bertram Ostendorf, and Megan Lewis. 2021.\n“Using Satellite Imagery to Evaluate Precontact Aboriginal\nForaging Habitats in the Australian Western Desert.”\nScientific Reports 11 (1): 10755."
+    "text": "::: {#refs}\n\n\n\n\n\nGoldblatt, Ran, Wei You, Gordon Hanson, and Amit K Khandelwal. 2016.\n“Detecting the Boundaries of Urban Areas in India: A Dataset for\nPixel-Based Image Classification in Google Earth Engine.”\nRemote Sensing 8 (8): 634.\n\n\nHazeu, Gerard, Pavel Milenov, Bas Pedroli, Vessela Samoungi, Michiel Van\nEupen, and Vassil Vassilev. 2014. “High Nature Value Farmland\nIdentification from Satellite Imagery, a Comparison of Two\nMethodological Approaches.” International Journal of Applied\nEarth Observation and Geoinformation 30: 98–112.\n\n\nKit, Oleksandr, Matthias Lüdeke, and Diana Reckien. 2012.\n“Texture-Based Identification of Urban Slums in Hyderabad, India\nUsing Remote Sensing Data.” Applied Geography 32 (2):\n660–67.\n\n\nLaw, W Boone, Peter Hiscock, Bertram Ostendorf, and Megan Lewis. 2021.\n“Using Satellite Imagery to Evaluate Precontact Aboriginal\nForaging Habitats in the Australian Western Desert.”\nScientific Reports 11 (1): 10755.\n\n\nLi, Wei, Jean-Daniel M Saphores, and Thomas W Gillespie. 2015. “A\nComparison of the Economic Benefits of Urban Green Spaces Estimated with\nNDVI and with High-Resolution Land Cover Data.” Landscape and\nUrban Planning 133: 105–17.\n\n\nLiu, Xiaoping, Guohua Hu, Yimin Chen, Xia Li, Xiaocong Xu, Shaoying Li,\nFengsong Pei, and Shaojian Wang. 2018. “High-Resolution\nMulti-Temporal Mapping of Global Urban Land Using Landsat Images Based\non the Google Earth Engine Platform.” Remote Sensing of\nEnvironment 209: 227–39.\n\n\nNazeer, Majid, Janet E Nichol, and Ying-Kit Yung. 2014.\n“Evaluation of Atmospheric Correction Models and Landsat Surface\nReflectance Product in an Urban Coastal Environment.”\nInternational Journal of Remote Sensing 35 (16): 6271–91.\n\n\nSeydi, Seyd Teymoor, Mehdi Akhoondzadeh, Meisam Amani, and Sahel\nMahdavi. 2021. “Wildfire Damage Assessment over Australia Using\nSentinel-2 Imagery and MODIS Land Cover Product Within the Google Earth\nEngine Cloud Platform.” Remote Sensing 13 (2): 220.\n\n\nShackelford, Aaron K, and Curt H Davis. 2003. “A Combined Fuzzy\nPixel-Based and Object-Based Approach for Classification of\nHigh-Resolution Multispectral Data over Urban Areas.” IEEE\nTransactions on GeoScience and Remote Sensing 41 (10): 2354–63.\n\n\nStanley, Janet, and Alan March. 2020. “Black Saturday: Urban\nSprawl and Climate Change Remain Key Dangers.” Pursuit.\nhttps://pursuit.unimelb.edu.au/articles/black-saturday-urban-sprawl-and-climate-change-remain-key-dangers.\n\n\nTaherzadeh, Ebrahim, and Helmi ZM Shafri. 2011. “Using\nHyperspectral Remote Sensing Data in Urban Mapping over Kuala\nLumpur.” In 2011 Joint Urban Remote Sensing Event,\n405–8. IEEE.\n\n\nTuia, Devis, Frédéric Ratle, Alexei Pozdnoukhov, and Gustavo\nCamps-Valls. 2009. “Multisource Composite Kernels for Urban-Image\nClassification.” IEEE Geoscience and Remote Sensing\nLetters 7 (1): 88–92.\n\n\nVelastegui-Montoya, Andrés, Néstor Montalván-Burbano, Paúl Carrión-Mero,\nHugo Rivera-Torres, Luı́s Sadeck, and Marcos Adami. 2023. “Google\nEarth Engine: A Global Analysis and Future Trends.” Remote\nSensing 15 (14): 3675.\n\n\nVictoria State Government. 2017. “Plan Melbourne\n2017–2050.” 2017. https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/plan-melbourne.\n\n\nWilson, Katherine. 2024. “Guardian News & Media Produces a\nVariety of Content with Funding from Outside Parties.” The\nGuardian, May. https://www.theguardian.com/info/2017/may/22/guardian-news-media-funding-and-investment."
   },
   {
     "objectID": "index.html#casa0023-learning-diary",
@@ -257,5 +257,47 @@
     "title": "4  Week 4 - Policy applications",
     "section": "4.4 References",
     "text": "4.4 References\n\n\n\n\nHazeu, Gerard, Pavel Milenov, Bas Pedroli, Vessela Samoungi, Michiel Van Eupen, and Vassil Vassilev. 2014. “High Nature Value Farmland Identification from Satellite Imagery, a Comparison of Two Methodological Approaches.” International Journal of Applied Earth Observation and Geoinformation 30: 98–112.\n\n\nStanley, Janet, and Alan March. 2020. “Black Saturday: Urban Sprawl and Climate Change Remain Key Dangers.” Pursuit. https://pursuit.unimelb.edu.au/articles/black-saturday-urban-sprawl-and-climate-change-remain-key-dangers.\n\n\nVictoria State Government. 2017. “Plan Melbourne 2017–2050.” 2017. https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/plan-melbourne.\n\n\nWilson, Katherine. 2024. “Guardian News & Media Produces a Variety of Content with Funding from Outside Parties.” The Guardian, May. https://www.theguardian.com/info/2017/may/22/guardian-news-media-funding-and-investment."
+  },
+  {
+    "objectID": "wk9.html#summary",
+    "href": "wk9.html#summary",
+    "title": "8  Week 9 - Synthetic Aperture Radar",
+    "section": "8.1 Summary",
+    "text": "8.1 Summary\nSynthetic Aperture Radar (SAR) is an active type of sensor that sends a signal at a specific frequency to Earth’s surface and records the signal in that same frequency coming back. The choice of the frequency of course will determine what the sensor is able to identify. For example sea band radio waves (4-8 GHz) can be used for detecting ice or ocean maritime activity. This is why depending on the wavelength we are able to penetrate e.g. through the tree canopy, as well as clouds. Another advantage is that this can collect data at night, as sun’s energy is not utilised.\nAperture of the radar is of significance, as that determines the resolution of the collected data. This is controlled by the size of the antenna, and the longer the antenna the higher resolution we could collect. For that reason, this sensor utilises the movement of the satellite in orbit to “expand” the antenna, because it is continuously sending signal to Earth imaging the specific location from different points in orbit. Hence the name - synthetic aperture radar. The image below illustrates how this works.\n\n\n\nIllustration of SAR. Source: DLR (CC BY-NC-ND 3.0)\n\n\nAnother notable aspect of SAR imagery is the polarisation of the signal. Different sensors will have different polarisation (either vertical or horizontal), which affects what materials are recorded. For example buildings and trees are most sensitive to sensor sending and receiving horizontal polarisations, while bare earth to vertical-vertical (VV). Therefore, for example it is of significance to capturing water’s surface, whether the imagery is collected on a windy or calm day, as rough water surface will reflect signal differently.\nBackscatter or amplitude of the signal, as well as its phase are also of significance. Phase is when in the wave cycle the signal reaches the sensor (whether its at a peak or trough of the wave). This is the technique, which enables change detection with very high accuracy. This is calle Interferometric SAR (InSAR), which can be used for creating Digital Elevation Models (DEMs). Furthermore, Differential InSAR (DInSAR) can also be used for detecting change after earthquakes, landslides or other events that had an impact on the earth’s surface, but also buildings after for example bombings.\nSAR imagery when catpured, of course also comes with lots of metadata, which is crucial to understand and analyse the imagery, for example it will matter whether the data was recorded on the south-to-north or north-to-south orbit pass. Moreover, SAR data will often be on a power scale, which necessitates the use of appropriate transformation methods. In practice, perhaps the most influential usecase of SAR data is for change detection, which is based on a ratio of the image after a change event to the image prior. There have been many ways developed for quantifying change, depending on the intended use case, such as inverted ratio which works in ways that gives changed pixels more importance."
+  },
+  {
+    "objectID": "wk9.html#reflections",
+    "href": "wk9.html#reflections",
+    "title": "8  Week 9 - Synthetic Aperture Radar",
+    "section": "9.1 Reflections",
+    "text": "9.1 Reflections\nTODO"
+  },
+  {
+    "objectID": "wk8.html",
+    "href": "wk8.html",
+    "title": "7  Week 8 - Assessment of classification models",
+    "section": "",
+    "text": "8 Applications\nTODO"
+  },
+  {
+    "objectID": "wk8.html#summary",
+    "href": "wk8.html#summary",
+    "title": "7  Week 8 - Assessment of classification models",
+    "section": "7.1 Summary",
+    "text": "7.1 Summary\nThis week the material continued on classification, focusing on aspects like object-based analysis and how we can assess classification results. Firstly, let’s look at object-based analysis, as opposed to pixel-based."
+  },
+  {
+    "objectID": "wk8.html#reflections",
+    "href": "wk8.html#reflections",
+    "title": "7  Week 8 - Assessment of classification models",
+    "section": "8.1 Reflections",
+    "text": "8.1 Reflections\nTODO"
+  },
+  {
+    "objectID": "wk9.html",
+    "href": "wk9.html",
+    "title": "8  Week 9 - Synthetic Aperture Radar",
+    "section": "",
+    "text": "9 Applications\nTODO"
   }
 ]

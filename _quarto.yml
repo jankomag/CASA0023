@@ -6,6 +6,19 @@ book:
   title: "CASA0023"
   author: "Jan Magnuszewski"
   date: "1/16/2024"
+  navbar:
+    collapse: true
+    collapse-below: lg
+    background: light
+    search: true
+    right:
+      - icon: github
+      - icon: twitter
+  sidebar:
+    title: "CASA0023"
+    style: floating
+    reader-mode: true
+  repo-url: https://github.com/jankomag/CASA0023
   chapters:
     - index.qmd
     - wk1.qmd
@@ -22,7 +35,9 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme:
+        light: [sandstone, flatly]
+        dark: [sandstone, darkly]
   pdf:
     documentclass: scrreprt
 

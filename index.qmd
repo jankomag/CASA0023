@@ -1,5 +1,10 @@
-# Preface {.unnumbered}
+# Remotely Sensing Cities and Environments {.unnumbered}
 
-### CASA0023 Learning Diary
+### Welcome to my CASA0023 Learning Diary
 
-This is the learning diary created as part of the module CASA0023 Remotely Sensing Cities and Environments. Here, I will be adding a summary of the lecture contents, personal reflections and some discussion about academic literature relevant to each week's topic.
+Here, I share my journey through the module CASA0023 Remotely Sensing Cities and Environments - as part of the Urban Spatial Science MSc degree in CASA, UCL (2023-24). Follow along, as I learn new techniques, review relevant research, apply the techniques in practice and reflect on the topics covered in each week.
+
+### Background
+I'm Jan, and I took this course, as I am curious to learn more about using aerial images and raster data from satellites for geospatial analysis. My experience with remote sensing, prior to taking this course was limited to a few introductory lectures about satellites and SAR imagery in a Geophysics module in my undergraduate. That is why I had a particular interest in taking this course to learn how these massive amounts of data *(so much of it is captured everyday!)*, can be used to extract valuable insights to address global issues.
+
+![Me before taking this class](res/gis_dummy.jpg){width=50%}

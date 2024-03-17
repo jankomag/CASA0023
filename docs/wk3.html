@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 - 3&nbsp; Week 3 - Corrections and Data Enhancements</title>
+<title>CASA0023 - 3&nbsp; Corrections and Data Enhancements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,7 +93,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections and Data Enhancements</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Data Enhancements</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -121,13 +121,13 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Remotely Sensing Cities and Environments</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1 - Introduction to Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -139,7 +139,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections and Data Enhancements</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Data Enhancements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -151,7 +151,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - Google Earth Engine</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -169,7 +169,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 9 - Synthetic Aperture Radar</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -204,7 +204,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections and Data Enhancements</span></h1>
+<h1 class="title"><span id="sec-week3" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Data Enhancements</span></span></h1>
 </div>
 
 
@@ -221,46 +221,45 @@ div.csl-indent {
 
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
-<p>The first digital sensor put on a Landsat satellite was the Multispectral Scanner Camera (MSS) built by Virginia Norwood. Its innovative design was initially reluctantly implemented by NASA - the previous RBV sensors were limited to only a few bands. The data captured by the satellites began to be made publicly available in 2008.</p>
+<p>This week, we start with a discussion on the history of satellite imagery. The first digital sensor put on a Landsat satellite was the Multispectral Scanner Camera (MSS) built by Virginia Norwood. Its innovative design was initially reluctantly implemented by NASA - the previous RBV sensors were limited to only a few bands. The image data captured by satellites was made publicly available in 2008.</p>
 <section id="corrections" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">3.1.1</span> Corrections</h3>
-<p>Raw satellite imagery require certain corrections before being ready for use in analysis. Even though, images come to us analysis-ready in most cases, it’s good to understand what types of corrections need to be applied, and why.</p>
-<p><strong>Geometric correction</strong> This is a correction that is needed for images taken at off-nadir angle, meaning they are not looking directly down. The correction is done by mapping the points on a pre-correction image to the same points in the ground truth image, which can be done with simple OLS regression. This correction is basically like georeferencing an image without coordinates.</p>
-<p><strong>Atmospheric correction</strong> This correction is needed when the signal going though the atmosphere is distorted resulting in haze and scattering in the images. This shows up in images as the adjacency effect, where pixel values switch their position. Also worth mentioning is that the radiance can be disturbed in different ways, e.g.&nbsp;it can scatter in the atmosphere, or the light can get absorbed by the particles in the atmosphere, which is atmospheric attenuation.</p>
+<p>Raw satellite imagery require certain corrections before being used for analysis. Even though these days, images come to us analysis-ready in most cases, it’s good to understand what types of corrections need to be applied, and why.</p>
+<p><strong>Geometric correction</strong> This is a correction of perspective that needs to be applied for images taken at off-nadir angle, meaning they are made not directly towards the Earth. The correction is done by mapping the points on a pre-correction image to the same points in the ground truth image, which can be done with simple OLS regression. This correction is a similar operation to georeferencing a map without coordinates.</p>
+<p><strong>Atmospheric correction</strong> This correction is needed when the signal going though the atmosphere is distorted resulting in haze and scattering in the images. This shows up in images as the adjacency effect, where pixel values switch their positions. Also worth mentioning is that the radiance can be disturbed in different ways, e.g.&nbsp;it can scatter in the atmosphere, or the light can get absorbed by the particles in the atmosphere - atmospheric attenuation.</p>
 <p><strong>Orthorectification / topographic correction</strong> This is used to force pixels to be viewed at nadir angle. To correct for this, we can use a cosine correction, which requires information on the sensor geometry and an elevation model of the area imaged.</p>
 </section>
 <section id="radiometric-calibration" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">3.1.2</span> Radiometric Calibration</h3>
-<p>Raw pixel values of a satellite image need to be converted from digital numbers to represent reflectance. In raw images, a Digital Number (DN) pixels represent image brightness or radiance recorded so the intensity of the electromagnetic radiation per pixel. Thus radiance is the amount of light recorded by the sensor, and reflectance is the ratio of signal reflected from an object, to the amount recorded by the sensor. Radiometric calibration is this process of converting DN to spectral radiance, calculated using values that the sensor was calibrated for, before deployed on satellites.</p>
-<p>As mentioned, in practice, most of the data we use comes already analysis-ready. For Landsat, algorithms like LEDPAS or L8SR apply the relevant corrections, which are the Level 2 products.</p>
+<p>Raw pixel values of a satellite image need to be converted from digital numbers to represent reflectance. In raw images, a Digital Number (DN) pixels represent image brightness or radiance recorded, which is the intensity of the electromagnetic radiation per pixel. Thus, radiance is the amount of light recorded by the sensor, while reflectance is the ratio of signal reflected from an object, to the amount recorded by the sensor. Radiometric calibration is this process of converting DN to spectral radiance, calculated using values that the sensor was calibrated for, before deployed on satellites.</p>
+<p>As mentioned, in practice, most of the data we use comes already analysis-ready. For Landsat, algorithms like LEDPAS or L8SR apply the relevant corrections, which are then made into e.g.&nbsp;Level 2 products.</p>
 </section>
 <section id="enhancements-and-data-joining" class="level3" data-number="3.1.3">
 <h3 data-number="3.1.3" class="anchored" data-anchor-id="enhancements-and-data-joining"><span class="header-section-number">3.1.3</span> Enhancements and data joining</h3>
-<p>Certain manipulations can be done of the corrected images. Firstly, we may need to join datasets as images naturally come in tiles. The edges of such tiles will usually overlap, in which case we can blend them into each other by mosaicking, or feathering.</p>
-<p><strong>Filters</strong> Applying filters to an image is like applying a convolution kernel to an image. Different filters can be used to enhance, extract or smooth certain features of the image.</p>
-<p><strong>Texture</strong> Various operations can be done with filters, e.g.&nbsp;calculating mean, variance, entropy and other operations of images. The value of every pixel will then reflect, e.g.&nbsp;the variance of the kernel centered on that pixel.</p>
+<p>Certain manipulations can be done of the corrected images. Firstly, we may need to join multiple, images that come in tiles. The edges of such tiles will usually overlap, in which case we can blend them into each other by mosaicking, or feathering.</p>
+<p><strong>Filters</strong> filters are essential convolution kernels (moving window). Different filters can be used to enhance, or smooth the <strong>texture</strong> of images or extract certain features. Various operations can be done with filters, e.g.&nbsp;calculating mean, variance, entropy etc. The resulting data will then hold the values of the operation applied to the pixels within the kernel centered on every pixel.</p>
 <p>We can also stack images on top of each other, e.g.&nbsp;from different dates, which is data fusion.</p>
-<p><strong>PCA</strong> Just how PCA, a dimensionality reduction method can be used on tabular data, where the number of variables is reduced, so is it the same for satellite imagery. Linear combinations of multiple bands are combined in a way that maximises the variation in pixel values thus reducing the spectral resolution.</p>
+<p>Just how <strong>PCA</strong>, a dimensionality reduction method can be used on tabular data, where the number of variables is reduced, so is it the same for satellite imagery. Linear combinations of multiple bands are combined in a way that maximises the variation in pixel values thus reducing the spectral resolution.</p>
 </section>
 </section>
 <section id="applications" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
-<p>The applications of the methods topics covered this week are also numerous. As discussed, there are several types of corrections that are necessary, and many different ways to apply them. For example, one study evaluated different models of atmospheric corrections on raw Landsat data, in order to find the most appropriate ones for the coastal environment around Hong Kong <span class="citation" data-cites="nazeer2014evaluation">(<a href="references.html#ref-nazeer2014evaluation" role="doc-biblioref">Nazeer, Nichol, and Yung 2014</a>)</span>. The authors found that different models for correction perform best over different surfaces. They also point to the fact that local characteristics of the atmosphere around Hong Kong have an impact on how the correction model performs, as it was created for continental landmass areas, this shows the importance of using a correction model appropriate for the local area.</p>
-<p>Texture-based methods applied to images have largely been used to identify or classify certain features of the environment. One such example is a study by <span class="citation" data-cites="kit2012texture">(<a href="references.html#ref-kit2012texture" role="doc-biblioref">Kit, Lüdeke, and Reckien 2012</a>)</span>, that identified slums in Hyderabad using texture-based methods on satellite imagery. The detection relies on a line detection based on lacunarity calculation, which is a measure that uses a variance filter. The performance of this method is compared to a PCA calculation from multiple bands, and the line detection method is found to be a significantly better predictor of slums in this city.</p>
+<p>Research utilising the methods covered this week is plentiful. As discussed, there are several types of corrections that are necessary, and many different ways to apply them. For example, one study evaluated different models of atmospheric corrections on raw Landsat data, in order to find the most appropriate ones for the coastal environment around Hong Kong <span class="citation" data-cites="nazeer2014evaluation">(<a href="references.html#ref-nazeer2014evaluation" role="doc-biblioref">Nazeer, Nichol, and Yung 2014</a>)</span>, and found various correction models to perform best over different land-cover classes. They also point to the fact that local characteristics of the atmosphere around Hong Kong have an impact on how the correction model performs, which matters especially when a model was created for continental landmass areas. This highlight the importance of using a correction model appropriate for the local area.</p>
+<p>Texture-based methods applied to images have largely been used to identify or classify certain features of the environment. One such example is a study by <span class="citation" data-cites="kit2012texture">(<a href="references.html#ref-kit2012texture" role="doc-biblioref">Kit, Lüdeke, and Reckien 2012</a>)</span>, that identified slums in Hyderabad using texture-based methods on satellite imagery. The detection relies on a line detection based on lacunarity calculation, which is a measure that uses a variance filter. The performance of this method is compared to a PCA calculation from multiple bands, and the line detection method is found to be a viable method for predicting slums in this city.</p>
 <p>This methodology of feature engineering with filters and texture-based methods can often be used as input to machine learning models in order to train a model for classifying features. For example, <span class="citation" data-cites="tuia2009multisource">(<a href="references.html#ref-tuia2009multisource" role="doc-biblioref">Tuia et al. 2009</a>)</span> have used SVMs for classifying high resolution urban images. The authors point to the fact that such methods, though, are limited as they do not consider the spatial relation between pixel values. It was shown that by including the spatial information, the model’s classification accuracy improved significantly.</p>
 </section>
 <section id="reflections" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">3.3</span> Reflections</h2>
-<p>The more technically-heavy material of this week has given me a good grounding in understanding some of the aspects of satellite data that we don’t directly deal with, as data comes analysis-ready. What I find particularly interesting are the kernel-based operations that can be applied to satellite data and what features they might show. I had not thought about applying kernel-based operations to images as filters and using such outputs as possible features that could show us something useful.</p>
-<p>I had a go at applying some filters on the 4th band of the image of Dunedin from previous weeks. The images below are the outputs of applying a 7x7 window and calculating the mean, variance, entropy etc.</p>
+<p>The more technically-heavy material of this week has given me a good grounding in understanding some of the aspects of satellite data that we don’t directly deal with, as data comes analysis-ready. What I find particularly interesting are the kernel-based operations that can be applied to satellite data and what features they might show. I previously had not encountered the methodology of applying kernel-based operations to images as feature extractors, which could then be used for modelling.</p>
+<p>I had a go at applying several filters to the 4th band of the image of Dunedin from previous weeks. The images below are the outputs of applying a 7x7 window and calculating the mean, variance, entropy etc.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="res/texture.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Texture measures of Dunedin</figcaption>
 </figure>
 </div>
-<p>Some of the measures may be difficult to interpret, as this was run on the band 4 representing infra-red - e.g.&nbsp;water is only distinctively shown in the mean texture, while high entropy, for example, shows up along the coastline. I then applied the PCA algorithm on the original bands of the data, which gave the principal components visible below. <img src="res/pca_dunnes.png" class="img-fluid" alt="PCA"></p>
-<p>Overall, I found the material this week particularly interesting, especially about filters and kernel based operations done on the images.</p>
+<p>Some of the measures may be difficult to interpret, as this was run on the band 4 representing green - e.g.&nbsp;water is only distinctively shown in the mean raster, while high entropy, for example, shows up along the coastline. I then applied the PCA algorithm on the original bands of the data, which gave the principal components visible below. <img src="res/pca_dunnes.png" class="img-fluid" alt="PCA"></p>
+<p>Overall, I found the material this week particularly interesting, especially learning about filters and kernel based operations, which can be performed on these data</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">

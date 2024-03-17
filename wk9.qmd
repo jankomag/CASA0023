@@ -1,4 +1,4 @@
-# Week 9 - Synthetic Aperture Radar
+# Synthetic Aperture Radar {#sec-week9}
 
 ## Summary
 
@@ -26,4 +26,4 @@ Another paper used SAR data for estimating urban density of buildings [@kajimoto
 
 SAR seems like an incredible technology, which has a lot of applications in very important fields, like disaster response. I
 
-Overall I have learned a lot from the course about remote sesning.
+TODO

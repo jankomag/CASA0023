@@ -1,6 +1,8 @@
-# Week 2 - Xaringan Presentation
+# Week 2 - Xaringan Presentation {#sec-week2}
 
-Here is the presentation on Landsat 9:
+This week, we were introduced to Xaringan - a tool for making presentations in code.
+
+Below is my presentation on Landsat 9
 
 ```{r echo = FALSE, out.width='40%'}
 xaringanExtra::embed_xaringan(

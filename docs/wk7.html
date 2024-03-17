@@ -171,7 +171,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 8 - SAR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week 9 - Synthetic Aperture Radar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -234,6 +234,7 @@ giniImpurity(D) = 1 - \sum_{i=1}^{k}{p_i^2}
 <p><span class="math display">\[
 treeScore(Tree) = SSR + \alpha T
 \]</span> where is the tree penalty parameter and <span class="math inline">\(T\)</span> is the number of leaves. The process works by iteratively increment alpha until the tree score starts to decrease. Cross validation can be used to find the best alpha.</p>
+<p>Pruning is used to build the tree, aiming to optimise the number of decisions in order to make the trees parsimonious.</p>
 <p><strong>Regression Trees</strong></p>
 <p>The same methodology of decision trees extends to regression problems, in which we need to predict a number rather than a class. The tree is built by splitting the dataset into groups along one of the axes, and a decision node is added at the point where the SSR resulting from that division is lowest. The first decision node is chose for the predictor whose split results in the lowest SSR, and the process is repeated iteratively until the number of splits reaches the limit imposed by the settings chosen, such as minimum number of data points for a leaf.</p>
 <div class="quarto-figure quarto-figure-center">

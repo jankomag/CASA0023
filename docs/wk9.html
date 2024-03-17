@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -213,12 +232,28 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> Applications</h1>
-<p>TODO</p>
+<p>The first study I wanted to note, used SAR data for detecting fault slip change after the 2011 earthquake in Christchurch, New Zealand <span class="citation" data-cites="liudetection">(<a href="references.html#ref-liudetection" role="doc-biblioref">Liu et al. 2013</a>)</span>. The authors utilise data from ALOS/PALSAR and TerraSAR-X (TSX) of the area before and after the earthquake, which enables the detection of ground movement and liquefied areas.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="res/WLiu_paper.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">InSAR image showing the effects of the 2011 earthquake in Christchurch. <a href="http://ares.tu.chiba-u.jp/yamazaki/pdf/proceeding/2013ACRS_Liu.pdf">Source: Liu W. et al.&nbsp;2013</a></figcaption>
+</figure>
+</div>
+<p>Another paper used SAR data for estimating urban density of buildings <span class="citation" data-cites="kajimoto2013urban">(<a href="references.html#ref-kajimoto2013urban" role="doc-biblioref">Kajimoto and Susaki 2013</a>)</span>. The issue that the authors address with their algorithm arises from the backscattering of signal from buildings in densely built-up urban areas The proposed methodology addresses the issue by adjusting the measurements to account for the polarisation orientation angle and normalising the data to correct for that.</p>
 <section id="reflections" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="reflections"><span class="header-section-number">9.1</span> Reflections</h2>
-<p>TODO</p>
+<p>SAR seems like an incredible technology, which has a lot of applications in very important fields, like disaster response. I</p>
+<p>Overall I have learned a lot from the course about remote sesning.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-kajimoto2013urban" class="csl-entry" role="listitem">
+Kajimoto, Muneyoshi, and Junichi Susaki. 2013. <span>“Urban Density Estimation from Polarimetric SAR Images Based on a POA Correction Method.”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em> 6 (3): 1418–29.
+</div>
+<div id="ref-liudetection" class="csl-entry" role="listitem">
+Liu, Wen, Masashi Matsuoka, Fumio Yamazaki, Takashi Nonaka, and Tadashi Sasagawa. 2013. <span>“Detection of Surface Displacements and Liquefied Areas in the 2011 Christchurch Earthquake from SAR Data.”</span>
+</div>
+</div>
 </section>
 </section>
 

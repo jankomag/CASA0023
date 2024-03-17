@@ -24,6 +24,9 @@ $$
 treeScore(Tree) = SSR + \alpha T
 $$ where \alpha is the tree penalty parameter and $T$ is the number of leaves. The process works by iteratively increment alpha until the tree score starts to decrease. Cross validation can be used to find the best alpha.
 
+Pruning is used to build the tree, aiming to optimise the number of decisions in order to make the trees parsimonious.
+
+
 **Regression Trees**
 
 The same methodology of decision trees extends to regression problems, in which we need to predict a number rather than a class. The tree is built by splitting the dataset into groups along one of the axes, and a decision node is added at the point where the SSR resulting from that division is lowest. The first decision node is chose for the predictor whose split results in the lowest SSR, and the process is repeated iteratively until the number of splits reaches the limit imposed by the settings chosen, such as minimum number of data points for a leaf.

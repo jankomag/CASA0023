@@ -12,7 +12,7 @@ Another type of analysis uses the opposite approach - sub-pixel analysis. This i
 
 **Accuracy Assessment**
 
-Classification accuracy assessment is measured with several metrics. Firstly, there are the Producer accuracy (recall), which is calculated as the true positive $(TP)$ rate over $(TP + FP)$, and the User’s accuracy (precision), measuring the rate of pixels being misclassified per specific class - $(TP)/(TP+FP)$. The overall accuracy can be calculated from these.
+Classification accuracy assessment is measured with several metrics. Firstly, there are the Producer accuracy (recall), which is calculated as the true positive $(TP)$ rate over $(TP + FP)$, and the User's accuracy (precision), measuring the rate of pixels being misclassified per specific class - $(TP)/(TP+FP)$. The overall accuracy can be calculated from these.
 
 Another measure of accuracy of classification is the kappa coefficient, which however is regarded as not a very appropriate metric. It is defined as
 
@@ -20,18 +20,16 @@ The confusion matrix will often be created for a classification problem, which s
 
 Another issue is when the data are not balanced in regards to classes,in which case we may use the F1 score, which aims to account for the imbalance and considers relative performance.
 
-$$F1 = \frac{2 \times \text{TP}}{2 \times \text{TP} + \text{FP} + \text{FN}}$$
-We also have the Receiver Operating Characteristic Curve, which uses the true positive rate and false positive rate to show how the predictions are made. Area under the curver give a quantifiable measure fo this method.
+$$F1 = \frac{2 \times \text{TP}}{2 \times \text{TP} + \text{FP} + \text{FN}}$$ We also have the Receiver Operating Characteristic Curve, which uses the true positive rate and false positive rate to show how the predictions are made. Area under the curver give a quantifiable measure fo this method.
 
 Another importand consideration is the train-test split, which is a fundamental step before training any modelm in order to avoid training the model too much on the traning data, and evaluating it on unseen. An even more appropriate approach is cross validation, which trains multiple times on different partitions of the dataset into the training and evaluates it on the testing. To account for spatial autocrrelation of testing and training data we need to be usiug spatial cross vlaidation, which ensures that points from different locations are used for traingna nad testin, limiting the risk of autocorrelation in testing an dtraining data. Additionally, spatial partitioning can be done to distinguish between the objects.
 
 # Applications
 
-Paper 1 assesses the pervformance of 6 different classification algorithms for land-use/land-cover using different assessment criteria. The assessment criteria used were RoC, kappa coefficient and  
+Paper 1 assesses the pervformance of 6 different classification algorithms for land-use/land-cover using different assessment criteria. The assessment criteria used were RoC, kappa coefficient and
 
 ## Reflections
 
 It seems to me that for urban problems, using object-based analysis such as convolutional neural networks is more important when working with very high resolution imagery (sub-meter resolution), while it may be less important when we have low-resolution imagery like 10 meters, in which case pixel-based analysis may be more efficient. That's because the features, which would really make a difference for identifying in an urban environment would likely be quite granular, and that's when spatial aspect of images would be most important to consider. But of course, this depends on the particular problem.
-
 
 so many assessment accuracy clasfficqaiton, oh what to choose?

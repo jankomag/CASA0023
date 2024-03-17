@@ -15,14 +15,15 @@ Backscatter or amplitude of the signal, as well as its phase are also of signifi
 SAR imagery when catpured, of course also comes with lots of metadata, which is crucial to understand and analyse the imagery, for example it will matter whether the data was recorded on the south-to-north or north-to-south orbit pass. Moreover, SAR data will often be on a power scale, which necessitates the use of appropriate transformation methods. In practice, perhaps the most influential usecase of SAR data is for change detection, which is based on a ratio of the image after a change event to the image prior. There have been many ways developed for quantifying change, depending on the intended use case, such as inverted ratio which works in ways that gives changed pixels more importance.
 
 # Applications
+
 The first study I wanted to note, used SAR data for detecting fault slip change after the 2011 earthquake in Christchurch, New Zealand [@liudetection]. The authors utilise data from ALOS/PALSAR and TerraSAR-X (TSX) of the area before and after the earthquake, which enables the detection of ground movement and liquefied areas.
 
 ![InSAR image showing the effects of the 2011 earthquake in Christchurch. [Source: Liu W. et al. 2013](http://ares.tu.chiba-u.jp/yamazaki/pdf/proceeding/2013ACRS_Liu.pdf)](res/WLiu_paper.png)
 
-Another paper used SAR data for estimating urban density of buildings [@kajimoto2013urban]. The issue that the authors address with their algorithm arises from the backscattering of signal from buildings in densely built-up urban areas The proposed methodology addresses the issue by adjusting the measurements to account for the polarisation orientation angle and normalising the data to correct for that. 
+Another paper used SAR data for estimating urban density of buildings [@kajimoto2013urban]. The issue that the authors address with their algorithm arises from the backscattering of signal from buildings in densely built-up urban areas The proposed methodology addresses the issue by adjusting the measurements to account for the polarisation orientation angle and normalising the data to correct for that.
 
 ## Reflections
 
-SAR seems like an incredible technology, which has a lot of applications in very important fields, like disaster response. I 
+SAR seems like an incredible technology, which has a lot of applications in very important fields, like disaster response. I
 
 Overall I have learned a lot from the course about remote sesning.

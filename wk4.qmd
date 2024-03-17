@@ -18,5 +18,4 @@ The approach outlined above of using remotely sensed data for this issue, may no
 
 The Melbourne Plan 2017-2050 mentions in its implementation the importance of using spatial data for planning new developments and open spaces [@planmelbourne]. The plan even mentions in one section how the city will "protect the right to farm in key locations within green wedges and peri-urban areas". However, the methodology or any directions of how this will be achieved is lacking.
 
-
 ## References

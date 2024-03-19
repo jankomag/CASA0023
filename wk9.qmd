@@ -16,14 +16,14 @@ SAR imagery when captured, of course also comes with lots of metadata, which is 
 
 # Applications
 
-The first study I wanted to note, used SAR data for detecting fault slip change after the 2011 earthquake in Christchurch, New Zealand [@liudetection]. The authors utilise data from ALOS/PALSAR and TerraSAR-X (TSX) of the area before and after the earthquake, which enables the detection of ground movement and liquefied areas.
+The first study I wanted to describe, used SAR data for detecting fault slip change after the 2011 earthquake in Christchurch, New Zealand [@liudetection]. The authors utilise data from ALOS/PALSAR and TerraSAR-X (TSX) of the area before and after the earthquake, and use InSAR for detecting ground movements and liquefied areas. The figures below show their results, from which it can be clearly seen that the city center of Christchurch was the most affected.
 
 ![InSAR image showing the effects of the 2011 earthquake in Christchurch. [Source: Liu W. et al. 2013](http://ares.tu.chiba-u.jp/yamazaki/pdf/proceeding/2013ACRS_Liu.pdf)](res/WLiu_paper.png)
 
-Another paper used SAR data for estimating urban density of buildings [@kajimoto2013urban]. The issue that the authors address with their algorithm arises from the backscattering of signal from buildings in densely built-up urban areas The proposed methodology addresses the issue by adjusting the measurements to account for the polarisation orientation angle and normalising the data to correct for that.
+Another paper used SAR data for estimating urban density of buildings within urban environments [@kajimoto2013urban]. The main issue that the authors address with their methodology arises from the backscattering of signal from buildings in densely built-up urban areas. The proposed methodology addresses the issue by adjusting the measurements to account for the polarisation orientation angle and normalising the data.
+
+SAR can also been used for flood detection by extracting the difference between two images of before and during a flooding event [@tripathy2022global]. However, the authors discuss a crucial issue - there is a lack of consensus for whether to use ascending or descending orbit data for flood detection, as often it can depend on local wind direction. That's why the authors develop a method to quantify the difference in images using both VV and VH data. Their methodology also allows for quantifying uncertainty of a flood by calculating the standard deviation of pixel values from the pre-flooding image collection.
 
 ## Reflections
 
-SAR seems like an incredible technology, which has a lot of applications in very important fields, like disaster response. I
-
-TODO
+SAR seems like an incredible technology, which has a lot of applications in very important fields, like disaster response, thanks to its usability for change detection at very fine scales. I see very wide potential for the use of SAR data especially considering ability to penetrate through clouds or trees, depending on the frequency chosen. The consideration of VH vs VV data is very interesting to me, as I can imagine the data would often show quite different things, depending from which side the satellite is approaching and the location is sensed.

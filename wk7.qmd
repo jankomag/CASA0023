@@ -20,8 +20,7 @@ The problem of overfitting decision trees - when they learn too granular aspects
 
 $$
 treeScore(Tree) = SSR + \alpha T
-$$
-where $\alpha$ is the tree penalty parameter and $T$ is the number of leaves. The process works by iteratively incrementing alpha. Therefore, pruning is used to build the tree, aiming to optimise the number of decisions in order to make the trees parsimonious. Cross validation can be used to find the best alpha.
+$$ where $\alpha$ is the tree penalty parameter and $T$ is the number of leaves. The process works by iteratively incrementing alpha. Therefore, pruning is used to build the tree, aiming to optimise the number of decisions in order to make the trees parsimonious. Cross validation can be used to find the best alpha.
 
 **Regression Trees**
 

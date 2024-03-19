@@ -16,27 +16,29 @@ Classification accuracy assessment can be measured with several metrics. Firstly
 
 The **confusion matrix** is a very useful tool that can often be created for a classification problem. It shows how wrong the model is through TP, TN, FP and FN rates.
 
-Another measure of accuracy of classification is the kappa coefficient, which however is not regarded as an appropriate metric, dur to several limitations. It is defined as
+Another measure of accuracy of classification is the kappa coefficient, which however is not regarded as an appropriate metric, due to several limitations. It is defined as
 
 $$
 {\displaystyle \kappa ={\frac {2\times (TP\times TN-FN\times FP)}{(TP+FP)\times (FP+TN)+(TP+FN)\times (FN+TN)}}}
 $$
 
-Another metric is the F1 score, which however does not account for $TN$. This metric aims to account for the issue of class imbalance, as it consideres the relative performance. It is defined:
+Another metric is the F1 score, which however does not account for $TN$. This metric aims to account for the issue of class imbalance, as it considers the relative performance. It is defined:
 
 $$F1 = \frac{2 \times \text{TP}}{2 \times \text{TP} + \text{FP} + \text{FN}}$$
 
-Lastly, the Receiver Operating Characteristic (ROC) Curve, which shows the accuracy of predictions using the true positive rate and false positive rate in one plot. Area under the curve gives a quantifiable measure fo this method.
+Lastly, the Receiver Operating Characteristic (ROC) Curve, which shows the accuracy of predictions using the true positive rate and false positive rate in one plot. Area under the curve gives a quantifiable measure for this method.
 
 Another important consideration for model training is the **train-test split**, which is a fundamental step before training any machine learning model. It is because, only evaluating the model on unseen data can give an accurate assessment of its predictive power. **Cross validation** is a method that repeats this process, which involves training a model multiple times on different partitions of the dataset and evaluating it on the testing set.
 
-To account for spatial autocorrelation of testing and training data, the use of **spatial cross validation** is recommended, which ensures that points from different locations are used for training and testing the model at each time, limiting the risk of data leakage due to spatial dependence of testing and training data. Furthermore, spatial partitioning can be use to distinguish regions of the study area, which often can be hierarchical.
+To account for spatial autocorrelation of testing and training data, the use of **spatial cross validation** is recommended, which ensures that points from different locations are used for training and testing the model at each time, limiting the risk of data leakage due to spatial dependence of testing and training data [@karasiak2022spatial]. Furthermore, spatial partitioning can be used to distinguish regions of the study area, which often can be hierarchical.
 
 # Applications
 
-The first paper compares the performance of pixel-based vs object-based analysis using 3 different classification algorithms for agricultural land cover classification [@duro2012comparison]. The authors found a statistically significant difference is better performance of the Decision Tree algorithm, when using object-based analysis, while in pixel-based analysis the three models produced the same results. The conclusion of the paper states that although pixel-based analysis was computationally cheaper to run, there was no advantage over using either approach on this problem.
+The first interesting paper compares the performance of pixel-based vs object-based analysis using 3 different classification algorithms for agricultural land cover classification [@duro2012comparison]. The authors found a statistically significant difference is better performance of the Decision Tree algorithm, when using object-based analysis, while in pixel-based analysis the three models produced the same results. The conclusion of the paper states that although pixel-based analysis was computationally cheaper to run, there was no advantage over using either approach on this problem.
 
-The lecture made me think about the retained regularity of the superpixel grid created by applying SLIC, such that the index information of column and rows is kept. This could be used for running convolutional filters on such data. A quick literature search revealed that such a method has been developed and applied to neural networks for semantic segmentation [@suzuki2018superpixel].
+The lecture made me think about the regularity of the superpixel grid created by applying SLIC, such that the index information of column and rows is retained. This could be used for running convolutional filters on such data. A quick literature search revealed that such a method has been developed and applied to neural networks for semantic segmentation [@suzuki2018superpixel].
+
+A very interesting approach to assessing the accuracy of a classification model was proposed by @van2004spatial, who argue that the spatial variability of a model's accuracy needs to be quantified. The approach uses a 3x3 window surrounding a pixel, and the local accuracy measure is calculated from the neighbouring pixels. The authors develop this method for land-cover classification in Netherlands and find that that local accuracy was higher in regions where land-covers were more homogeneous.
 
 # Reflections
 

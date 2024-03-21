@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -36,16 +55,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -64,10 +85,46 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CASA0023</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jankomag" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jankomag" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jan-magnuszewski-77718214a/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/jankomag/CASA0023" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -83,14 +140,9 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">CASA0023</a> 
-    </div>
-      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -113,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - Xaringan Presentation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Xaringan Presentation on a sensor</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -143,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8 - Assessment of classification models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Assessment of classification models</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -186,126 +238,13 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>::: {#refs}</p>
+<div id="refs" role="list" style="display: none">
+
+</div>
 
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-goldblatt2016detecting" class="csl-entry" role="listitem">
-Goldblatt, Ran, Wei You, Gordon Hanson, and Amit K Khandelwal. 2016.
-<span>“Detecting the Boundaries of Urban Areas in India: A Dataset for
-Pixel-Based Image Classification in Google Earth Engine.”</span>
-<em>Remote Sensing</em> 8 (8): 634.
-</div>
-<div id="ref-hazeu2014high" class="csl-entry" role="listitem">
-Hazeu, Gerard, Pavel Milenov, Bas Pedroli, Vessela Samoungi, Michiel Van
-Eupen, and Vassil Vassilev. 2014. <span>“High Nature Value Farmland
-Identification from Satellite Imagery, a Comparison of Two
-Methodological Approaches.”</span> <em>International Journal of Applied
-Earth Observation and Geoinformation</em> 30: 98–112.
-</div>
-<div id="ref-kajimoto2013urban" class="csl-entry" role="listitem">
-Kajimoto, Muneyoshi, and Junichi Susaki. 2013. <span>“Urban Density
-Estimation from Polarimetric SAR Images Based on a POA Correction
-Method.”</span> <em>IEEE Journal of Selected Topics in Applied Earth
-Observations and Remote Sensing</em> 6 (3): 1418–29.
-</div>
-<div id="ref-kit2012texture" class="csl-entry" role="listitem">
-Kit, Oleksandr, Matthias Lüdeke, and Diana Reckien. 2012.
-<span>“Texture-Based Identification of Urban Slums in Hyderabad, India
-Using Remote Sensing Data.”</span> <em>Applied Geography</em> 32 (2):
-660–67.
-</div>
-<div id="ref-law2021using" class="csl-entry" role="listitem">
-Law, W Boone, Peter Hiscock, Bertram Ostendorf, and Megan Lewis. 2021.
-<span>“Using Satellite Imagery to Evaluate Precontact Aboriginal
-Foraging Habitats in the Australian Western Desert.”</span>
-<em>Scientific Reports</em> 11 (1): 10755.
-</div>
-<div id="ref-li2015comparison" class="csl-entry" role="listitem">
-Li, Wei, Jean-Daniel M Saphores, and Thomas W Gillespie. 2015. <span>“A
-Comparison of the Economic Benefits of Urban Green Spaces Estimated with
-NDVI and with High-Resolution Land Cover Data.”</span> <em>Landscape and
-Urban Planning</em> 133: 105–17.
-</div>
-<div id="ref-liudetection" class="csl-entry" role="listitem">
-Liu, Wen, Masashi Matsuoka, Fumio Yamazaki, Takashi Nonaka, and Tadashi
-Sasagawa. 2013. <span>“Detection of Surface Displacements and Liquefied
-Areas in the 2011 Christchurch Earthquake from SAR Data.”</span>
-</div>
-<div id="ref-liu2018high" class="csl-entry" role="listitem">
-Liu, Xiaoping, Guohua Hu, Yimin Chen, Xia Li, Xiaocong Xu, Shaoying Li,
-Fengsong Pei, and Shaojian Wang. 2018. <span>“High-Resolution
-Multi-Temporal Mapping of Global Urban Land Using Landsat Images Based
-on the Google Earth Engine Platform.”</span> <em>Remote Sensing of
-Environment</em> 209: 227–39.
-</div>
-<div id="ref-nazeer2014evaluation" class="csl-entry" role="listitem">
-Nazeer, Majid, Janet E Nichol, and Ying-Kit Yung. 2014.
-<span>“Evaluation of Atmospheric Correction Models and Landsat Surface
-Reflectance Product in an Urban Coastal Environment.”</span>
-<em>International Journal of Remote Sensing</em> 35 (16): 6271–91.
-</div>
-<div id="ref-seydi2021wildfire" class="csl-entry" role="listitem">
-Seydi, Seyd Teymoor, Mehdi Akhoondzadeh, Meisam Amani, and Sahel
-Mahdavi. 2021. <span>“Wildfire Damage Assessment over Australia Using
-Sentinel-2 Imagery and MODIS Land Cover Product Within the Google Earth
-Engine Cloud Platform.”</span> <em>Remote Sensing</em> 13 (2): 220.
-</div>
-<div id="ref-shackelford2003combined" class="csl-entry" role="listitem">
-Shackelford, Aaron K, and Curt H Davis. 2003. <span>“A Combined Fuzzy
-Pixel-Based and Object-Based Approach for Classification of
-High-Resolution Multispectral Data over Urban Areas.”</span> <em>IEEE
-Transactions on GeoScience and Remote Sensing</em> 41 (10): 2354–63.
-</div>
-<div id="ref-stanley2020" class="csl-entry" role="listitem">
-Stanley, Janet, and Alan March. 2020. <span>“Black Saturday: Urban
-Sprawl and Climate Change Remain Key Dangers.”</span> <em>Pursuit</em>.
-<a href="https://pursuit.unimelb.edu.au/articles/black-saturday-urban-sprawl-and-climate-change-remain-key-dangers">https://pursuit.unimelb.edu.au/articles/black-saturday-urban-sprawl-and-climate-change-remain-key-dangers</a>.
-</div>
-<div id="ref-taherzadeh2011using" class="csl-entry" role="listitem">
-Taherzadeh, Ebrahim, and Helmi ZM Shafri. 2011. <span>“Using
-Hyperspectral Remote Sensing Data in Urban Mapping over Kuala
-Lumpur.”</span> In <em>2011 Joint Urban Remote Sensing Event</em>,
-405–8. IEEE.
-</div>
-<div id="ref-tripathy2022global" class="csl-entry" role="listitem">
-Tripathy, Pratyush, and Teja Malladi. 2022. <span>“Global Flood Mapper:
-A Novel Google Earth Engine Application for Rapid Flood Mapping Using
-Sentinel-1 SAR.”</span> <em>Natural Hazards</em> 114 (2): 1341–63.
-</div>
-<div id="ref-tuia2009multisource" class="csl-entry" role="listitem">
-Tuia, Devis, Frédéric Ratle, Alexei Pozdnoukhov, and Gustavo
-Camps-Valls. 2009. <span>“Multisource Composite Kernels for Urban-Image
-Classification.”</span> <em>IEEE Geoscience and Remote Sensing
-Letters</em> 7 (1): 88–92.
-</div>
-<div id="ref-velastegui2023google" class="csl-entry" role="listitem">
-Velastegui-Montoya, Andrés, Néstor Montalván-Burbano, Paúl Carrión-Mero,
-Hugo Rivera-Torres, Luı́s Sadeck, and Marcos Adami. 2023. <span>“Google
-Earth Engine: A Global Analysis and Future Trends.”</span> <em>Remote
-Sensing</em> 15 (14): 3675.
-</div>
-<div id="ref-planmelbourne" class="csl-entry" role="listitem">
-Victoria State Government. 2017. <span>“<span>Plan Melbourne
-2017–2050</span>.”</span> 2017. <a href="https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/plan-melbourne">https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/plan-melbourne</a>.
-</div>
-<div id="ref-guardian2024" class="csl-entry" role="listitem">
-Wilson, Katherine. 2024. <span>“Guardian News &amp; Media Produces a
-Variety of Content with Funding from Outside Parties.”</span> <em>The
-Guardian</em>, May. <a href="https://www.theguardian.com/info/2017/may/22/guardian-news-media-funding-and-investment">https://www.theguardian.com/info/2017/may/22/guardian-news-media-funding-and-investment</a>.
-</div>
-<div id="ref-wu2020geemap" class="csl-entry" role="listitem">
-Wu, Qiusheng. 2020. <span>“Geemap: A Python Package for Interactive
-Mapping with Google Earth Engine.”</span> <em>Journal of Open Source
-Software</em> 5 (51): 2305.
-</div>
-<div id="ref-yimby_melbourne_2023" class="csl-entry" role="listitem">
-YIMBY Melbourne. 2023. <span>“<span class="nocase">Melbourne’s Missing
-Middle in 2023</span>.”</span> Melbourne, Australia: YIMBY Melbourne;
-Presentation.
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -326,6 +265,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

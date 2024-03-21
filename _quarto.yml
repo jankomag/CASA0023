@@ -11,9 +11,12 @@ book:
     collapse-below: lg
     background: light
     search: true
-    right:
+    tools:
       - icon: github
       - icon: twitter
+        href: https://twitter.com/jankomag
+      - icon: linkedin
+        href: https://www.linkedin.com/in/jan-magnuszewski-77718214a/
   sidebar:
     title: "CASA0023"
     style: floating

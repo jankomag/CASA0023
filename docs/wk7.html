@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.3.433" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Learning Diary – 6  Classification</title>
+<title>CASA0023 Learning Diary - 6&nbsp; Classification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,7 +41,27 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./wk8.html" rel="next">
+<link href="./wk6.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,38 +88,30 @@ div.csl-indent {
 
 </head>
 
-<body>
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="/index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">CASA0023 Learning Diary</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-  aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
-  onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/jankomag" rel="" target=""><i 
-  class="bi bi-twitter" 
-  role="img" 
->
+    <a class="nav-link" href="https://twitter.com/jankomag" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/jan-magnuszewski-77718214a/" rel="" target=""><i 
-  class="bi bi-linkedin" 
-  role="img" 
->
+    <a class="nav-link" href="https://www.linkedin.com/in/jan-magnuszewski-77718214a/" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -115,16 +125,11 @@ div.csl-indent {
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn"
-      data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" 
-      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <h1 class="quarto-secondary-nav-title"></h1>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" 
-      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wk7.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -145,78 +150,86 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome to my CASA0023 Learning Diary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/wk1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span></span></a>
+  <a href="./wk1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/wk2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>2</span>  <span class='chapter-title'>Xaringan Presentation on a sensor</span></span></a>
+  <a href="./wk2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Xaringan Presentation on a sensor</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/wk3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections and Data Enhancements</span></span></a>
+  <a href="./wk3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Data Enhancements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/wk4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>4</span>  <span class='chapter-title'>Policy applications</span></span></a>
+  <a href="./wk4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy applications</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/wk6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span></span></a>
+  <a href="./wk6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/wk7.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class='chapter-number'>6</span>  <span class='chapter-title'>Classification</span></span></a>
+  <a href="./wk7.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/wk8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>7</span>  <span class='chapter-title'>Assessment of classification models</span></span></a>
+  <a href="./wk8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Assessment of classification models</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/wk9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>8</span>  <span class='chapter-title'>Synthetic Aperture Radar</span></span></a>
+  <a href="./wk9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/references.html" class="sidebar-item-text sidebar-link">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" ></div>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <div id="quarto-toc-target"></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> Applications</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">6.3</span> Reflections</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-week7" class="quarto-section-identifier"><span class="chapter-number">6</span>  <span class="chapter-title">Classification</span></span></h1>
+<h1 class="title"><span id="sec-week7" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification</span></span></h1>
 </div>
 
 
@@ -230,17 +243,9 @@ div.csl-indent {
   
 
 </header>
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#summary" id="toc-summary"><span class="header-section-number">6.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications"><span class="header-section-number">6.2</span> Applications</a></li>
-  <li><a href="#reflections" id="toc-reflections"><span class="header-section-number">6.3</span> Reflections</a></li>
-  </ul>
-</nav>
+
 <section id="summary" class="level2" data-number="6.1">
-<h2 data-number="6.1"><span class="header-section-number">6.1</span> Summary</h2>
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
 <p>This week I learned more about applying machine learning methods to raster data. We looked specifically at two types of analysis - classification and regression. Such models utilise an expert system, which is a mechanism that draws conclusions from a knowledge base it was exposed to during training. Machine learning on raster images can be broadly divided into object-based and pixel-based analysis.</p>
 <p><strong>Decision Trees - Classification</strong></p>
 <p>This is an algorithm for splitting up the dataset into classes based on values of predictors. Decision trees are built up of decision nodes where data points are split, and end-nodes (leaves), which match the data that falls into that leaf to a particular class. Basically it’s classifying the data based on many if else statements. However, the mechanism for constructing such trees can be more complex.</p>
@@ -256,41 +261,37 @@ treeScore(Tree) = SSR + \alpha T
 <p><strong>Regression Trees</strong></p>
 <p>The same methodology of decision trees extends to regression problems, in which we need to predict a number rather than a class. The tree is built by splitting the dataset into groups along one of the axes, and a decision node is added at the point where the SSR resulting from that division is lowest. The first decision node is chosen for the predictor whose split results in the lowest SSR, and the process is repeated iteratively until the number of splits reaches the limit imposed by the modeller, such as minimum number of data points for a leaf.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="res/regtree.png" class="img-fluid" /></p>
-<figcaption>Illustration of a Regression Tree applied to a dataset. <a href="https://www.datacamp.com/tutorial/decision-trees-R">Source: datacamp.com</a></figcaption>
+<figure class="figure">
+<p><img src="res/regtree.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Illustration of a Regression Tree applied to a dataset. <a href="https://www.datacamp.com/tutorial/decision-trees-R">Source: datacamp.com</a></figcaption>
 </figure>
 </div>
 <p><strong>Random forest</strong></p>
 <p>This method generalises the above by building many random decision trees. We have little control of how individual trees are built. However, many simple trees overall vote for the final prediction, which works very well for many problems. The training of random forests benefits from bootstrapping, which is a method that randomly subsets the training data, such that every tree is trained on a different subset. An out-of-bag hold out set of the data can be used to evaluate the trained model.</p>
 <p><strong>Support Vector Machines</strong></p>
-<p>SVMs are a method that finds a hyperplane in the multidimensional feature space, which best divides that data into classes. The method can benefit from applying kernel functions, which project the data points onto hyperplanes, which are easier to classify. The hyperparameters, which control the model can be tuned, e.g. using grid search, which tests many predefined values of parameters (very expensive), or using an optimisation algorithm, such as simulated annealing, swarm optimisation, or genetic algorithms.</p>
+<p>SVMs are a method that finds a hyperplane in the multidimensional feature space, which best divides that data into classes. The method can benefit from applying kernel functions, which project the data points onto hyperplanes, which are easier to classify. The hyperparameters, which control the model can be tuned, e.g.&nbsp;using grid search, which tests many predefined values of parameters (very expensive), or using an optimisation algorithm, such as simulated annealing, swarm optimisation, or genetic algorithms.</p>
 <p><strong>Unsupervised methods</strong></p>
 <p>Additionally, unsupervised methods can also be used for identifying unspecified classes. Algorithms such as DBSCAN or k-means clustering, will assign data points to optimal classes, based on the patterns within it. When a cluster is identified that comprises two known classes, cluster busting can be performed, which is reapplying a clustering algorithm to that one cluster.</p>
-<p>Applying these methods to satellite imagery can be done for every pixel, where e.g. a land cover class is assigned to every pixel (classification) or an index value (regression), and features are channels.</p>
+<p>Applying these methods to satellite imagery can be done for every pixel, where e.g.&nbsp;a land cover class is assigned to every pixel (classification) or an index value (regression), and features are channels.</p>
 </section>
 <section id="applications" class="level2" data-number="6.2">
-<h2 data-number="6.2"><span class="header-section-number">6.2</span> Applications</h2>
-<p>There are many examples of research papers applying machine learning methods to remotely sensed data in urban research. The first one I wanted to focus on here is a paper that takes a two-pronged fuzzy approach to classification, in that land cover classes are assigned probabilities to pixels, rather than definitive classes <span class="citation" data-cites="shackelford2003combined">(<a href="#ref-shackelford2003combined" role="doc-biblioref">Shackelford and Davis 2003</a>)</span>. In the model, similar classes such as <em>roads</em> and <em>buildings</em> would in such a case be most difficult to classify, especially since pixel-based analysis doesn’t consider spatial dependence. After performing pixel-based classification, the authors develop a second method, that performs object-based segmentation of the image based on similarity of classes in nearby pixels, which makes the output more consistent, resulting in an overall more flexible methodology.</p>
+<h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
+<p>There are many examples of research papers applying machine learning methods to remotely sensed data in urban research. The first one I wanted to focus on here is a paper that takes a two-pronged fuzzy approach to classification, in that land cover classes are assigned probabilities to pixels, rather than definitive classes <span class="citation" data-cites="shackelford2003combined">(<a href="references.html#ref-shackelford2003combined" role="doc-biblioref">Shackelford and Davis 2003</a>)</span>. In the model, similar classes such as <em>roads</em> and <em>buildings</em> would in such a case be most difficult to classify, especially since pixel-based analysis doesn’t consider spatial dependence. After performing pixel-based classification, the authors develop a second method, that performs object-based segmentation of the image based on similarity of classes in nearby pixels, which makes the output more consistent, resulting in an overall more flexible methodology.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="res/shackleford.gif" class="img-fluid" /></p>
-<figcaption>Output of fuzzy classifier for dense urban image <span class="citation" data-cites="shackelford2003combined">(<a href="#ref-shackelford2003combined" role="doc-biblioref">Shackelford and Davis 2003</a>)</span></figcaption>
+<figure class="figure">
+<p><img src="res/shackleford.gif" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Output of fuzzy classifier for dense urban image <span class="citation" data-cites="shackelford2003combined">(<a href="references.html#ref-shackelford2003combined" role="doc-biblioref">Shackelford and Davis 2003</a>)</span></figcaption>
 </figure>
 </div>
-<p>Another paper by <span class="citation" data-cites="goldblatt2016detecting">Goldblatt et al. (<a href="#ref-goldblatt2016detecting" role="doc-biblioref">2016</a>)</span> is aimed at identifying boundaries of urban areas using a pixel based analysis of remotely sensed data, using SVM and Random Forest models. The model outputs of pixel-based classification had to be post-processed to remove single pixels classified as urban, which smooths the final classification. Furthermore, the authors develop the model in GEE, which enables the research to be easily replicated for other countries, which poses opportunities for advancing future research.</p>
+<p>Another paper by <span class="citation" data-cites="goldblatt2016detecting">Goldblatt et al. (<a href="references.html#ref-goldblatt2016detecting" role="doc-biblioref">2016</a>)</span> is aimed at identifying boundaries of urban areas using a pixel based analysis of remotely sensed data, using SVM and Random Forest models. The model outputs of pixel-based classification had to be post-processed to remove single pixels classified as urban, which smooths the final classification. Furthermore, the authors develop the model in GEE, which enables the research to be easily replicated for other countries, which poses opportunities for advancing future research.</p>
 </section>
 <section id="reflections" class="level2" data-number="6.3">
-<h2 data-number="6.3"><span class="header-section-number">6.3</span> Reflections</h2>
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.3</span> Reflections</h2>
 <p>This week was actually quite unique as it offered a perspective on working with image data I had not considered before. Prior to this lecture, I had only learned about object-based analysis of images with convolutional operations, and specifically using neural networks to extract and encode information from images in order to classify or identify features from images. This lecture opened my eyes to much simpler way of working with satellite imagery that uses only pixel values of various bands (features) to predict such outcomes.</p>
-<p>This enables the use of classical machine learning algorithms like e.g. Random Forests in the context of raster data, by treating is just like tabular data. This gets rid of the spatial dependence of pixels that are next to each other, which of course is a significant limitation, but such methods often can achieve the same performance at a significantly computationally cheaper cost than convolutional neural networks.</p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden" data-render-id="quarto-int-sidebar-title">CASA0023 Learning Diary</span> <span class="hidden" data-render-id="quarto-int-navbar-title">CASA0023 Learning Diary</span> <span class="hidden" data-render-id="quarto-int-next"><span class="chapter-number">7</span>  <span class="chapter-title">Assessment of classification models</span></span> <span class="hidden" data-render-id="quarto-int-prev"><span class="chapter-number">5</span>  <span class="chapter-title">Google Earth Engine</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/index.html">Welcome to my CASA0023 Learning Diary</span> <span class="hidden" data-render-id="quarto-int-sidebar:/wk1.html"><span class="chapter-number">1</span>  <span class="chapter-title">Introduction to Remote Sensing</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/wk2.html"><span class="chapter-number">2</span>  <span class="chapter-title">Xaringan Presentation on a sensor</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/wk3.html"><span class="chapter-number">3</span>  <span class="chapter-title">Corrections and Data Enhancements</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/wk4.html"><span class="chapter-number">4</span>  <span class="chapter-title">Policy applications</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/wk6.html"><span class="chapter-number">5</span>  <span class="chapter-title">Google Earth Engine</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/wk7.html"><span class="chapter-number">6</span>  <span class="chapter-title">Classification</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/wk8.html"><span class="chapter-number">7</span>  <span class="chapter-title">Assessment of classification models</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/wk9.html"><span class="chapter-number">8</span>  <span class="chapter-title">Synthetic Aperture Radar</span></span> <span class="hidden" data-render-id="quarto-int-sidebar:/references.html">References</span> <span class="hidden" data-render-id="quarto-int-navbar:https://twitter.com/jankomag">https://twitter.com/jankomag</span> <span class="hidden" data-render-id="quarto-int-navbar:https://www.linkedin.com/in/jan-magnuszewski-77718214a/">https://www.linkedin.com/in/jan-magnuszewski-77718214a/</span> <span class="hidden" data-render-id="quarto-navbar-tools:https://github.com/jankomag/CASA0023">https://github.com/jankomag/CASA0023</span> <span class="hidden" data-render-id="quarto-breadcrumbs-ade245cc70cbcdb0bf6b40a0e9d51ce2"><span class="chapter-number">6</span>  <span class="chapter-title">Classification</span></span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden" data-render-id="quarto-metatitle">CASA0023 Learning Diary - <span id="sec-week7" class="quarto-section-identifier"><span class="chapter-number">6</span>  <span class="chapter-title">Classification</span></span></span> <span class="hidden" data-render-id="quarto-twittercardtitle">CASA0023 Learning Diary - <span id="sec-week7" class="quarto-section-identifier"><span class="chapter-number">6</span>  <span class="chapter-title">Classification</span></span></span> <span class="hidden" data-render-id="quarto-ogcardtitle">CASA0023 Learning Diary - <span id="sec-week7" class="quarto-section-identifier"><span class="chapter-number">6</span>  <span class="chapter-title">Classification</span></span></span> <span class="hidden" data-render-id="quarto-metasitename">CASA0023 Learning Diary</span> <span class="hidden" data-render-id="quarto-twittercarddesc"></span> <span class="hidden" data-render-id="quarto-ogcardddesc"></span></p>
-</div>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<p>This enables the use of classical machine learning algorithms like e.g.&nbsp;Random Forests in the context of raster data, by treating is just like tabular data. This gets rid of the spatial dependence of pixels that are next to each other, which of course is a significant limitation, but such methods often can achieve the same performance at a significantly computationally cheaper cost than convolutional neural networks.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-goldblatt2016detecting" class="csl-entry" role="listitem">
 Goldblatt, Ran, Wei You, Gordon Hanson, and Amit K Khandelwal. 2016. <span>“Detecting the Boundaries of Urban Areas in India: A Dataset for Pixel-Based Image Classification in Google Earth Engine.”</span> <em>Remote Sensing</em> 8 (8): 634.
 </div>
@@ -301,7 +302,7 @@ Shackelford, Aaron K, and Curt H Davis. 2003. <span>“A Combined Fuzzy Pixel-Ba
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -651,18 +652,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a  href="/wk6.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span></span>
+      <a href="./wk6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a  href="/wk8.html" class="pagination-link">
-        <span class="nav-page-text"><span class='chapter-number'>7</span>  <span class='chapter-title'>Assessment of classification models</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./wk8.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Assessment of classification models</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 
-</body>
 
-</html>
+
+</body></html>

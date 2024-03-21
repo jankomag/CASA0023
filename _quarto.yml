@@ -22,6 +22,7 @@ book:
     title: "CASA0023 Learning Diary"
     style: floating
     reader-mode: true
+    background: "dark"
   repo-url: https://github.com/jankomag/CASA0023
   chapters:
     - index.qmd

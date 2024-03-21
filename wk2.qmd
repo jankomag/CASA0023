@@ -1,4 +1,4 @@
-# Week 2 - Xaringan Presentation {#sec-week2}
+# Xaringan Presentation on a sensor {#sec-week2}
 
 This week, we were introduced to Xaringan - a tool for making presentations in code.
 

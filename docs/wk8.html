@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 - 7&nbsp; Assessment of classification models</title>
+<title>CASA0023 Learning Diary - 7&nbsp; Assessment of classification models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,7 +96,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">CASA0023</span>
+    <span class="navbar-title">CASA0023 Learning Diary</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -105,6 +105,16 @@ div.csl-indent {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jankomag" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jan-magnuszewski-77718214a/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
 </ul>
             <div class="quarto-navbar-tools">
     <a href="https://github.com/jankomag/CASA0023" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
@@ -141,7 +151,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Remotely Sensing Cities and Environments</span></a>
+ <span class="menu-text">Welcome to my CASA0023 Learning Diary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -153,7 +163,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wk2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - Xaringan Presentation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Xaringan Presentation on a sensor</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -209,8 +219,8 @@ div.csl-indent {
    
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8</span> Applications</a></li>
-  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">9</span> Reflections</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">7.2</span> Applications</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">7.3</span> Reflections</a></li>
   </ul>
 </nav>
     </div>
@@ -258,14 +268,14 @@ div.csl-indent {
 <p>Another important consideration for model training is the <strong>train-test split</strong>, which is a fundamental step before training any machine learning model. It is because, only evaluating the model on unseen data can give an accurate assessment of its predictive power. <strong>Cross validation</strong> is a method that repeats this process, which involves training a model multiple times on different partitions of the dataset and evaluating it on the testing set.</p>
 <p>To account for spatial autocorrelation of testing and training data, the use of <strong>spatial cross validation</strong> is recommended, which ensures that points from different locations are used for training and testing the model at each time, limiting the risk of data leakage due to spatial dependence of testing and training data <span class="citation" data-cites="karasiak2022spatial">(<a href="references.html#ref-karasiak2022spatial" role="doc-biblioref">Karasiak et al. 2022</a>)</span>. Furthermore, spatial partitioning can be used to distinguish regions of the study area, which often can be hierarchical.</p>
 </section>
-<section id="applications" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Applications</h1>
+<section id="applications" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
 <p>The first interesting paper compares the performance of pixel-based vs object-based analysis using 3 different classification algorithms for agricultural land cover classification <span class="citation" data-cites="duro2012comparison">(<a href="references.html#ref-duro2012comparison" role="doc-biblioref">Duro, Franklin, and Dubé 2012</a>)</span>. The authors found a statistically significant difference is better performance of the Decision Tree algorithm, when using object-based analysis, while in pixel-based analysis the three models produced the same results. The conclusion of the paper states that although pixel-based analysis was computationally cheaper to run, there was no advantage over using either approach on this problem.</p>
 <p>The lecture made me think about the regularity of the superpixel grid created by applying SLIC, such that the index information of column and rows is retained. This could be used for running convolutional filters on such data. A quick literature search revealed that such a method has been developed and applied to neural networks for semantic segmentation <span class="citation" data-cites="suzuki2018superpixel">(<a href="references.html#ref-suzuki2018superpixel" role="doc-biblioref">Suzuki et al. 2018</a>)</span>.</p>
 <p>A very interesting approach to assessing the accuracy of a classification model was proposed by <span class="citation" data-cites="van2004spatial">Oort et al. (<a href="references.html#ref-van2004spatial" role="doc-biblioref">2004</a>)</span>, who argue that the spatial variability of a model’s accuracy needs to be quantified. The approach uses a 3x3 window surrounding a pixel, and the local accuracy measure is calculated from the neighbouring pixels. The authors develop this method for land-cover classification in Netherlands and find that that local accuracy was higher in regions where land-covers were more homogeneous.</p>
 </section>
-<section id="reflections" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Reflections</h1>
+<section id="reflections" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">7.3</span> Reflections</h2>
 <p>There are so many different accuracy assessment indicators, yet not one of them will ever give you the whole picture. Even if a particular indicator takes into account different error types, like the F1 score, the metric is still only a single number which doesn’t convey the whole picture.</p>
 <p>It seems to me that for urban problems, using object-based analysis such as convolutional neural networks is more important when working with very high resolution imagery (sub-meter resolution), while it may be less important when we have low-resolution imagery like 10 meters, in which case pixel-based analysis may be more efficient. That’s because the features, which would really make a difference for identifying in an urban environment would likely be quite granular, and that’s when spatial aspect of images would be most important to consider. But of course, this depends on the particular problem.</p>
 <p>Furthermore, in object-based analysis it is interesting to me that using a bottom-up vs top-down approach for segmentation into supercells will be more or less efficient based on the type of data we are working with. For example if we are looking to segment very detailed structure in the image, it may be quicker to arrive at the desired segmentation if starting from joining pixels into supercells. Whereas if we are working with a very high resolution images and want to segment large objects, it may make sense to use the top-down approach.These kinds of reflections are what make this course interesting.</p>

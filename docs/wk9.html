@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 - 8&nbsp; Synthetic Aperture Radar</title>
+<title>CASA0023 Learning Diary - 8&nbsp; Synthetic Aperture Radar</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">CASA0023</span>
+    <span class="navbar-title">CASA0023 Learning Diary</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -103,11 +103,6 @@ div.csl-indent {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jankomag" rel="" target=""><i class="bi bi-github" role="img">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/jankomag" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
@@ -154,7 +149,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Remotely Sensing Cities and Environments</span></a>
+ <span class="menu-text">Welcome to my CASA0023 Learning Diary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -222,10 +217,8 @@ div.csl-indent {
    
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">9</span> Applications</a>
-  <ul class="collapse">
-  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">9.1</span> Reflections</a></li>
-  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> Applications</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">8.3</span> Reflections</a></li>
   </ul>
 </nav>
     </div>
@@ -263,8 +256,8 @@ div.csl-indent {
 <p>Backscatter or amplitude of the signal, as well as its phase are also of significance. Phase is when in the wave cycle the signal reaches the sensor (whether its at a peak or trough of the wave). This is the technique, which enables change detection with very high accuracy. This is called Interferometric SAR (InSAR), which can be used for creating Digital Elevation Models (DEMs). Furthermore, Differential InSAR (DInSAR) can also be used for detecting change after earthquakes, landslides or other events that had an impact on the earth’s surface, but also buildings after for example bombings.</p>
 <p>SAR imagery when captured, of course also comes with lots of metadata, which is crucial to understand and analyse the imagery, for example it will matter whether the data was recorded on the south-to-north or north-to-south orbit pass. Moreover, SAR data will often be on a power scale, which necessitates the use of appropriate transformation methods. In practice, perhaps the most influential use case of SAR data is for change detection, which is based on a ratio of the image after a change event to the image prior. There have been many ways developed for quantifying change, depending on the intended use case, such as inverted ratio which works in ways that gives changed pixels more importance.</p>
 </section>
-<section id="applications" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Applications</h1>
+<section id="applications" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> Applications</h2>
 <p>The first study I wanted to describe, used SAR data for detecting fault slip change after the 2011 earthquake in Christchurch, New Zealand <span class="citation" data-cites="liudetection">(<a href="references.html#ref-liudetection" role="doc-biblioref">Liu et al. 2013</a>)</span>. The authors utilise data from ALOS/PALSAR and TerraSAR-X (TSX) of the area before and after the earthquake, and use InSAR for detecting ground movements and liquefied areas. The figures below show their results, from which it can be clearly seen that the city center of Christchurch was the most affected.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -274,8 +267,9 @@ div.csl-indent {
 </div>
 <p>Another paper used SAR data for estimating urban density of buildings within urban environments <span class="citation" data-cites="kajimoto2013urban">(<a href="references.html#ref-kajimoto2013urban" role="doc-biblioref">Kajimoto and Susaki 2013</a>)</span>. The main issue that the authors address with their methodology arises from the backscattering of signal from buildings in densely built-up urban areas. The proposed methodology addresses the issue by adjusting the measurements to account for the polarisation orientation angle and normalising the data.</p>
 <p>SAR can also been used for flood detection by extracting the difference between two images of before and during a flooding event <span class="citation" data-cites="tripathy2022global">(<a href="references.html#ref-tripathy2022global" role="doc-biblioref">Tripathy and Malladi 2022</a>)</span>. However, the authors discuss a crucial issue - there is a lack of consensus for whether to use ascending or descending orbit data for flood detection, as often it can depend on local wind direction. That’s why the authors develop a method to quantify the difference in images using both VV and VH data. Their methodology also allows for quantifying uncertainty of a flood by calculating the standard deviation of pixel values from the pre-flooding image collection.</p>
-<section id="reflections" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="reflections"><span class="header-section-number">9.1</span> Reflections</h2>
+</section>
+<section id="reflections" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">8.3</span> Reflections</h2>
 <p>SAR seems like a great technology, which has a lot of applications in very important fields, like disaster response, thanks to its usability for change detection at very fine scales. I see very wide potential for the use of SAR data especially considering ability to penetrate through clouds or trees, depending on the frequency chosen. The consideration of VH vs VV data is very interesting to me, as I can imagine the data would often show quite different things, depending from which side the satellite is approaching and the location is sensed.</p>
 
 
@@ -290,7 +284,6 @@ Liu, Wen, Masashi Matsuoka, Fumio Yamazaki, Takashi Nonaka, and Tadashi Sasagawa
 Tripathy, Pratyush, and Teja Malladi. 2022. <span>“Global Flood Mapper: A Novel Google Earth Engine Application for Rapid Flood Mapping Using Sentinel-1 SAR.”</span> <em>Natural Hazards</em> 114 (2): 1341–63.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->

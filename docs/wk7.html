@@ -106,11 +106,6 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/jankomag" rel="" target=""><i class="bi bi-github" role="img">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/jankomag" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
@@ -156,7 +151,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Remotely Sensing Cities and Environments</span></a>
+ <span class="menu-text">Welcome to my CASA0023 Learning Diary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -281,8 +276,14 @@ treeScore(Tree) = SSR + \alpha T
 </section>
 <section id="applications" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
-<p>There are many examples of research papers applying machine learning methods to remotely sensed data in urban research. The first one I wanted to focus on here is a paper that takes a two-pronged fuzzy approach to classification, in that land cover classes are assigned probabilities to pixels, rather than definitive classes <span class="citation" data-cites="shackelford2003combined">(<a href="references.html#ref-shackelford2003combined" role="doc-biblioref">Shackelford and Davis 2003</a>)</span>. Similar classes such as Roads and Buildings would in such a case be most difficult to classify, especially since pixel-based analysis doesn’t consider spatial dependence. After performing pixel-based classification, the authors develop a second method, that performs object-based segmentation of the image based on similarity of classes in nearby pixels, which makes the output more consistent, resulting in an overall more flexible methodology.</p>
-<p>Another paper by <span class="citation" data-cites="goldblatt2016detecting">(<a href="references.html#ref-goldblatt2016detecting" role="doc-biblioref">Goldblatt et al. 2016</a>)</span> is aimed at identifying boundaries of urban areas using a pixel based analysis of remotely sensed data, using SVM and Random Forest models. The model outputs of pixel-based classification had to be post-processed to remove single pixels classified as urban, which smooths the final classification. Furthermore, the authors develop the model in GEE, which enables the research to be easily replicated for other countries, which poses opportunities for advancing future research.</p>
+<p>There are many examples of research papers applying machine learning methods to remotely sensed data in urban research. The first one I wanted to focus on here is a paper that takes a two-pronged fuzzy approach to classification, in that land cover classes are assigned probabilities to pixels, rather than definitive classes <span class="citation" data-cites="shackelford2003combined">(<a href="references.html#ref-shackelford2003combined" role="doc-biblioref">Shackelford and Davis 2003</a>)</span>. In the model, similar classes such as <em>roads</em> and <em>buildings</em> would in such a case be most difficult to classify, especially since pixel-based analysis doesn’t consider spatial dependence. After performing pixel-based classification, the authors develop a second method, that performs object-based segmentation of the image based on similarity of classes in nearby pixels, which makes the output more consistent, resulting in an overall more flexible methodology.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="res/shackleford.gif" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Output of fuzzy classifier for dense urban image <span class="citation" data-cites="shackelford2003combined">(<a href="references.html#ref-shackelford2003combined" role="doc-biblioref">Shackelford and Davis 2003</a>)</span></figcaption>
+</figure>
+</div>
+<p>Another paper by <span class="citation" data-cites="goldblatt2016detecting">Goldblatt et al. (<a href="references.html#ref-goldblatt2016detecting" role="doc-biblioref">2016</a>)</span> is aimed at identifying boundaries of urban areas using a pixel based analysis of remotely sensed data, using SVM and Random Forest models. The model outputs of pixel-based classification had to be post-processed to remove single pixels classified as urban, which smooths the final classification. Furthermore, the authors develop the model in GEE, which enables the research to be easily replicated for other countries, which poses opportunities for advancing future research.</p>
 </section>
 <section id="reflections" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.3</span> Reflections</h2>

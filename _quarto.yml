@@ -12,8 +12,6 @@ book:
     background: light
     search: true
     right:
-      - icon: github
-        href: https://github.com/jankomag
       - icon: twitter
         href: https://twitter.com/jankomag
       - icon: linkedin

@@ -255,6 +255,12 @@ div.csl-indent {
 <p>Raw satellite imagery require certain corrections before being used for analysis. Even though these days, images come to us analysis-ready in most cases, it’s good to understand what types of corrections need to be applied, and why.</p>
 <p><strong>Geometric correction</strong> This is a correction of perspective that needs to be applied for images taken at off-nadir angle, meaning they are made not directly towards the Earth. The correction is done by mapping the points on a pre-correction image to the same points in the ground truth image, which can be done with simple OLS regression. This correction is a similar operation to georeferencing a map without coordinates.</p>
 <p><strong>Atmospheric correction</strong> This correction is needed when the signal going though the atmosphere is distorted resulting in haze and scattering in the images. This shows up in images as the adjacency effect, where pixel values switch their positions. Also worth mentioning is that the radiance can be disturbed in different ways, e.g.&nbsp;it can scatter in the atmosphere, or the light can get absorbed by the particles in the atmosphere - atmospheric attenuation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="res/atmospheric_corr.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Atmospheric correction removes the blueish tint. Source: <a href="https://blog.mapbox.com/before-and-after-atmospheric-correction-97f55cb2b5d1">Mapbox</a></figcaption>
+</figure>
+</div>
 <p><strong>Orthorectification / topographic correction</strong> This is used to force pixels to be viewed at nadir angle. To correct for this, we can use a cosine correction, which requires information on the sensor geometry and an elevation model of the area imaged.</p>
 </section>
 <section id="radiometric-calibration" class="level3" data-number="3.1.2">

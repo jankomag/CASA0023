@@ -83,6 +83,8 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -252,7 +254,8 @@ div.csl-indent {
 </figure>
 </div>
 <p>There are four resolutions of images captured by satellites - spatial, spectral, radiometric and temporal. Individual bands can be merged to create indices, which show specific characteristics of the Earth’s surface that we want to measure. In a situation where bands are not in the same spatial resolutions, images need to be resampled into the same resolution, in order to be able to work with such data conjointly, either by downscaling or upscaling.</p>
-<p>Satellite data, e.g.&nbsp;from Sentinel and Landsat satellites can be freely accessed from the Copernicus Open Access Hub. Software tools like QGIS, GEE and SNAP (specifically for Sentinel data) can be used to analyse and process this data, e.g.&nbsp;for combining different bands to produce desired indices. Examples of such indices include false colour composite, the tasseled cap or atmospheric penetration composite, which allow us to visualise features of the environment that are not observable to the human eye.</p>
+<p>Satellite data, e.g.&nbsp;from Sentinel and Landsat satellites can be freely accessed from the Copernicus Open Access Hub. Software tools like QGIS, GEE and SNAP (specifically for Sentinel data) can be used to analyse and process this data, e.g.&nbsp;for combining different bands to produce desired indices. Examples of indices include false colour composite, the tasseled cap or atmospheric penetration composite, which allow us to visualise features of the environment that are not observable to the human eye. Composites like NDBI and NDVI allow us to highlight certain features of the Earth’s surface. For example the Normalised Difference Built-up Index (<span class="math inline">\(NDBI\)</span>) is calculated as</p>
+<p><span class="math display">\[NDBI = \frac{(SWIR - NIR)}{(SWIR + NIR)}\]</span> where <span class="math inline">\(SWIR\)</span> is the short-wave infrared band reflectance, and <span class="math inline">\(NIR\)</span> is the near-infrared. This composite highlights built-up areas and is useful for identifying urban areas.</p>
 </section>
 <section id="applications" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
